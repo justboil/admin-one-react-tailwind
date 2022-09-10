@@ -5,6 +5,6 @@ import mainReducer from './mainSlice'
 export default configureStore({
   reducer: {
     style: styleReducer,
-    main: mainReducer
-  }
+    main: mainReducer,
+  },
 })

@@ -1,12 +1,8 @@
 import { useSelector } from 'react-redux'
-import {
-  gradientBgPurplePink,
-  gradientBgDark,
-  gradientBgPinkRed,
-} from "../src/colors"; 
+import { gradientBgPurplePink, gradientBgDark, gradientBgPinkRed } from '../src/colors'
 
 export default function SectionFullScreen({ bg, children }) {
-  const darkMode = useSelector(state => state.style.darkMode)
+  const darkMode = useSelector((state) => state.style.darkMode)
 
   let componentClass = 'flex min-h-screen items-center justify-center '
 
@@ -18,9 +14,5 @@ export default function SectionFullScreen({ bg, children }) {
     componentClass += gradientBgPinkRed
   }
 
-  return (
-    <div className={componentClass}>
-      {children}
-    </div>
-  )
+  return <div className={componentClass}>{children}</div>
 }

@@ -17,11 +17,11 @@ export const mainSlice = createSlice({
   },
   reducers: {
     setUser: (state, action) => {
-      state.userName = action.payload.name;
-      state.userEmail = action.payload.email;
-      state.userAvatar = action.payload.avatar;
+      state.userName = action.payload.name
+      state.userEmail = action.payload.email
+      state.userAvatar = action.payload.avatar
     },
-  }
+  },
 })
 
 // Action creators are generated for each case reducer function

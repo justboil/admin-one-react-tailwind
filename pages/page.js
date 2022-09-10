@@ -9,18 +9,12 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="text-6xl font-bold">
-          The page
-        </h1>
+        <h1 className="text-6xl font-bold">The page</h1>
       </main>
     </>
   )
 }
 
 Home.getLayout = function getLayout(page) {
-  return (
-    <LayoutAuthenticated>
-      {page}
-    </LayoutAuthenticated>
-  )
+  return <LayoutAuthenticated>{page}</LayoutAuthenticated>
 }
