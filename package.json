@@ -18,6 +18,8 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.2",
     "@tailwindcss/line-clamp": "^0.4.0",
+    "@types/node": "18.7.16",
+    "@types/react-redux": "^7.1.24",
     "autoprefixer": "^10.4.0",
     "eslint": "^8.23.0",
     "eslint-config-next": "12.2.5",
