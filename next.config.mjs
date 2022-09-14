@@ -4,6 +4,7 @@
  const nextConfig = {
   basePath: "/admin-one-react-tailwind",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
