@@ -5,7 +5,7 @@ type Props = {
   zIndex?: string
   type?: string
   children?: ReactNode
-  onClick: Function
+  onClick: (e: React.MouseEvent) => void
 }
 
 export default function OverlayLayer({

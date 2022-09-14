@@ -38,7 +38,7 @@ export default function NavBarItem({ item }: Props) {
 
   const itemLabel = item.isCurrentUser ? userName : item.label
 
-  const handleMenuClick = (e: React.MouseEvent) => {
+  const handleMenuClick = () => {
     if (item.menu) {
       setIsDropdownActive(!isDropdownActive)
     }

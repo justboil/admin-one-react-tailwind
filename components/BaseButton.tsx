@@ -20,7 +20,7 @@ type Props = {
   disabled?: boolean
   roundedFull?: boolean
   isGrouped?: boolean
-  onClick?: Function
+  onClick?: (e: React.MouseEvent) => void
 }
 
 export default function BaseButton({

@@ -15,9 +15,7 @@ type Props = {
 export default function NavBar({ menu, className = '', children }: Props) {
   const [isMenuNavBarActive, setIsMenuNavBarActive] = useState(false)
 
-  const handleMenuNavBarToggleClick = (e: MouseEvent) => {
-    e.preventDefault()
-
+  const handleMenuNavBarToggleClick = () => {
     setIsMenuNavBarActive(!isMenuNavBarActive)
   }
 

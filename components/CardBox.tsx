@@ -13,7 +13,7 @@ type Props = {
   isModal?: boolean
   children: ReactNode
   footer?: ReactNode
-  onClick?: Function
+  onClick?: (e: React.MouseEvent) => void
 }
 
 export default function CardBox({

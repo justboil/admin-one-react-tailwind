@@ -6,7 +6,6 @@ import BaseButton from './BaseButton'
 import BaseIcon from './BaseIcon'
 import BaseLevel from './BaseLevel'
 import CardBox from './CardBox'
-import NumberDynamic from './NumberDynamic'
 import PillTagTrend from './PillTagTrend'
 
 type Props = {

@@ -7,7 +7,7 @@ import { store } from '../src/stores/store'
 import { Provider } from 'react-redux'
 import '../styles/main.css'
 
-export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
 

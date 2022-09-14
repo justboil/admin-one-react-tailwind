@@ -4,7 +4,6 @@ import {
   mdiChevronDown,
   mdiAlertCircleOutline,
   mdiInformationOutline,
-  mdiCheckAll,
   mdiCheckCircleOutline,
   mdiAlertOutline,
 } from '@mdi/js'

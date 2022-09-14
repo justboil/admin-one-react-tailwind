@@ -9,7 +9,7 @@ import { useAppSelector } from '../src/stores/hooks'
 type Props = {
   menu: MenuAsideItem[]
   className?: string
-  onAsideLgCloseClick: Function
+  onAsideLgCloseClick: () => void
 }
 
 export default function AsideMenuLayer({ menu, className = '', ...props }: Props) {

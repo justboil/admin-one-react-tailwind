@@ -5,18 +5,16 @@ import {
   mdiChartTimelineVariant,
   mdiGithub,
   mdiMonitorCellphone,
-  mdiRead,
   mdiReload,
 } from '@mdi/js'
 import Head from 'next/head'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import type { ReactElement } from 'react'
 import BaseButton from '../components/BaseButton'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
-import CardBoxWidget from '../components/CardBoxWIdget'
-import NumberDynamic from '../components/NumberDynamic'
+import CardBoxWidget from '../components/CardBoxWidget'
 import { useSampleClients, useSampleTransactions } from '../hooks/sampleData'
 import CardBoxTransaction from '../components/CardBoxTransaction'
 import { Client, Transaction } from '../interfaces'

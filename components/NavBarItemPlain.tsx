@@ -5,7 +5,7 @@ type Props = {
   display?: string
   useMargin?: boolean
   children: ReactNode
-  onClick?: Function
+  onClick?: (e: React.MouseEvent) => void
 }
 
 export default function NavBarItemPlain({
@@ -22,14 +22,8 @@ export default function NavBarItemPlain({
     useMargin ? 'my-2 mx-3' : 'py-2 px-3'
   }`
 
-  const handleClick = (e: React.MouseEvent) => {
-    if (onClick) {
-      onClick(e)
-    }
-  }
-
   return (
-    <div className={`${classBase} ${classAddon}`} onClick={handleClick}>
+    <div className={`${classBase} ${classAddon}`} onClick={onClick}>
       {children}
     </div>
   )
