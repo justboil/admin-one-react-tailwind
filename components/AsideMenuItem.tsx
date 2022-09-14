@@ -31,9 +31,7 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
 
       const activePathname = new URL(asPath, location.href).pathname
 
-      if (linkPathName === activePathname) {
-        setIsLinkActive(true)
-      }
+      setIsLinkActive(linkPathName === activePathname)
     }
   })
 
