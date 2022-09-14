@@ -27,6 +27,7 @@ import { sampleChartData } from '../components/charts/config'
 import ChartLineSample from '../components/charts/LineSample'
 import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/TableSampleClients'
+import { appTitle } from '../src/config'
 
 const Dashboard = () => {
   const { clients } = useSampleClients()
@@ -45,7 +46,7 @@ const Dashboard = () => {
   return (
     <>
       <Head>
-        <title>Dashboard</title>
+        <title>Dashboard - {appTitle}</title>
       </Head>
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>

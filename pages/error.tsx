@@ -5,12 +5,13 @@ import BaseButton from '../components/BaseButton'
 import CardBox from '../components/CardBox'
 import SectionFullScreen from '../components/SectionFullScreen'
 import LayoutGuest from '../components/layouts/Guest'
+import { appTitle } from '../src/config'
 
 export default function Error() {
   return (
     <>
       <Head>
-        <title>Error</title>
+        <title>Error - {appTitle}</title>
       </Head>
 
       <SectionFullScreen bg="pinkRed">
