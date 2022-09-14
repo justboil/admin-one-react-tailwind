@@ -5,20 +5,22 @@ import BaseIcon from './BaseIcon'
 import { ColorButtonKey } from '../interfaces'
 
 type Props = {
-  label?: string,
-  icon?: string,
-  iconSize?: string|number,
-  href?: string,
-  target?: string,
-  type?: string,
-  color?: ColorButtonKey,
-  className?: string,
-  asAnchor?: boolean,
-  small?: boolean,
-  outline?: boolean,
-  active?: boolean,
-  disabled?: boolean,
+  label?: string
+  icon?: string
+  iconSize?: string | number
+  href?: string
+  target?: string
+  type?: string
+  color?: ColorButtonKey
+  className?: string
+  asAnchor?: boolean
+  small?: boolean
+  outline?: boolean
+  active?: boolean
+  disabled?: boolean
   roundedFull?: boolean
+  isGrouped?: boolean
+  onClick?: Function
 }
 
 export default function BaseButton({
@@ -28,14 +30,16 @@ export default function BaseButton({
   href,
   target,
   type,
-  color='white',
-  className='',
+  color = 'white',
+  className = '',
   asAnchor = false,
   small = false,
   outline = false,
   active = false,
   disabled = false,
   roundedFull = false,
+  isGrouped = false,
+  onClick,
 }: Props) {
   const componentClass = [
     'inline-flex',
@@ -65,6 +69,10 @@ export default function BaseButton({
     componentClass.push(outline ? 'opacity-50' : 'opacity-70')
   }
 
+  if (isGrouped) {
+    componentClass.push('mr-3 last:mr-0 mb-3')
+  }
+
   const componentClassString = componentClass.join(' ')
 
   const componentChildren = (
@@ -77,16 +85,14 @@ export default function BaseButton({
   if (href && !disabled) {
     return (
       <Link href={href} target={target} passHref>
-        <a className={componentClassString}>
-          {componentChildren}
-        </a>
+        <a className={componentClassString}>{componentChildren}</a>
       </Link>
     )
   }
 
   return React.createElement(
     asAnchor ? 'a' : 'button',
-    { className: componentClassString, type: type ?? 'button', target, disabled },
+    { className: componentClassString, type: type ?? 'button', target, disabled, onClick },
     componentChildren
   )
 }

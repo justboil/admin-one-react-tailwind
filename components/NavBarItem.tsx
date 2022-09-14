@@ -6,15 +6,17 @@ import BaseDivider from './BaseDivider'
 import BaseIcon from './BaseIcon'
 import UserAvatarCurrentUser from './UserAvatarCurrentUser'
 import NavBarMenuList from './NavBarMenuList'
-import { useAppSelector } from '../src/stores/hooks'
+import { useAppDispatch, useAppSelector } from '../src/stores/hooks'
 import { MenuNavBarItem } from '../interfaces'
+import { setDarkMode } from '../src/stores/styleSlice'
 
 type Props = {
-  item: MenuNavBarItem,
-  onClick: Function,
+  item: MenuNavBarItem
 }
 
-export default function NavBarItem({ item, onClick }: Props) {
+export default function NavBarItem({ item }: Props) {
+  const dispatch = useAppDispatch()
+
   const navBarItemLabelActiveColorStyle = useAppSelector(
     (state) => state.style.navBarItemLabelActiveColorStyle
   )
@@ -38,11 +40,11 @@ export default function NavBarItem({ item, onClick }: Props) {
 
   const handleMenuClick = (e: React.MouseEvent) => {
     if (item.menu) {
-      setIsDropdownActive(!isDropdownActive);
+      setIsDropdownActive(!isDropdownActive)
     }
 
-    if (onClick) {
-      onClick(e);
+    if (item.isToggleLightDark) {
+      dispatch(setDarkMode(null))
     }
   }
 

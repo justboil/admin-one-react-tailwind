@@ -1,5 +1,5 @@
-export const darkModeKey = 'darkMode'
+export const localStorageDarkModeKey = 'darkMode'
 
-export const styleKey = 'style'
+export const localStorageStyleKey = 'style'
 
 export const containerMaxW = 'xl:max-w-6xl xl:mx-auto'

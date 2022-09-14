@@ -3,8 +3,8 @@ import { MenuAsideItem } from '../interfaces'
 import AsideMenuItem from './AsideMenuItem'
 
 type Props = {
-  menu: MenuAsideItem[],
-  isDropdownList?: boolean,
+  menu: MenuAsideItem[]
+  isDropdownList?: boolean
   className?: string
 }
 

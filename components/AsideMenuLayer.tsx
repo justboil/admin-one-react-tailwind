@@ -7,11 +7,12 @@ import { MenuAsideItem } from '../interfaces'
 import { useAppSelector } from '../src/stores/hooks'
 
 type Props = {
-  menu: MenuAsideItem[],
+  menu: MenuAsideItem[]
   className?: string
+  onAsideLgCloseClick: Function
 }
 
-export default function AsideMenuLayer({ menu, className='' }: Props) {
+export default function AsideMenuLayer({ menu, className = '', ...props }: Props) {
   const asideStyle = useAppSelector((state) => state.style.asideStyle)
   const asideBrandStyle = useAppSelector((state) => state.style.asideBrandStyle)
   const asideScrollbarsStyle = useAppSelector((state) => state.style.asideScrollbarsStyle)
@@ -22,6 +23,11 @@ export default function AsideMenuLayer({ menu, className='' }: Props) {
     icon: mdiLogout,
     color: 'info',
     isLogout: true,
+  }
+
+  const handleAsideLgCloseClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    props.onAsideLgCloseClick()
   }
 
   return (
@@ -37,7 +43,10 @@ export default function AsideMenuLayer({ menu, className='' }: Props) {
           <div className="text-center flex-1 lg:text-left lg:pl-6 xl:text-center xl:pl-0">
             <b className="font-black">One</b>
           </div>
-          <button className="hidden lg:inline-block xl:hidden p-3">
+          <button
+            className="hidden lg:inline-block xl:hidden p-3"
+            onClick={handleAsideLgCloseClick}
+          >
             <BaseIcon path={mdiClose} />
           </button>
         </div>

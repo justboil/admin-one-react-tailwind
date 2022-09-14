@@ -4,7 +4,7 @@ import { gradientBgPurplePink, gradientBgDark, gradientBgPinkRed } from '../src/
 import { useAppSelector } from '../src/stores/hooks'
 
 type Props = {
-  bg: BgKey,
+  bg: BgKey
   children: ReactNode
 }
 

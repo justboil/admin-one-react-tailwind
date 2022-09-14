@@ -3,14 +3,15 @@ import { MenuNavBarItem } from '../interfaces'
 import NavBarItem from './NavBarItem'
 
 type Props = {
-  menu: MenuNavBarItem[],
-  onClick?: Function
+  menu: MenuNavBarItem[]
 }
 
-export default function NavBarMenuList({ menu, onClick }: Props) {
+export default function NavBarMenuList({ menu }: Props) {
   return (
     <>
-      {menu.map((item, index) => <NavBarItem key={index} item={item} onClick={onClick} />)}
+      {menu.map((item, index) => (
+        <NavBarItem key={index} item={item} />
+      ))}
     </>
   )
 }

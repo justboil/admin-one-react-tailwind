@@ -7,13 +7,12 @@ import NavBarMenuList from './NavBarMenuList'
 import { MenuNavBarItem } from '../interfaces'
 
 type Props = {
-  menu: MenuNavBarItem[],
-  handleMenuClick: Function,
-  className: string,
+  menu: MenuNavBarItem[]
+  className: string
   children: ReactNode
 }
 
-export default function NavBar({ menu, handleMenuClick, className='', children }: Props) {
+export default function NavBar({ menu, className = '', children }: Props) {
   const [isMenuNavBarActive, setIsMenuNavBarActive] = useState(false)
 
   const handleMenuNavBarToggleClick = (e: MouseEvent) => {
@@ -38,7 +37,7 @@ export default function NavBar({ menu, handleMenuClick, className='', children }
             isMenuNavBarActive ? 'block' : 'hidden'
           } max-h-screen-menu overflow-y-auto lg:overflow-visible absolute w-screen top-14 left-0 bg-gray-50 shadow-lg lg:w-auto lg:flex lg:static lg:shadow-none dark:bg-slate-800`}
         >
-          <NavBarMenuList menu={menu} onClick={handleMenuClick} />
+          <NavBarMenuList menu={menu} />
         </div>
       </div>
     </nav>

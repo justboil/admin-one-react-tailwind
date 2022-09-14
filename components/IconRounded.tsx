@@ -4,11 +4,11 @@ import { colorsBgLight, colorsText } from '../src/colors'
 import BaseIcon from './BaseIcon'
 
 type Props = {
-  icon: string,
-  color: ColorKey,
-  w?: string,
-  h?: string,
-  bg?: boolean,
+  icon: string
+  color: ColorKey
+  w?: string
+  h?: string
+  bg?: boolean
   className?: string
 }
 

@@ -2,13 +2,18 @@ import React, { ReactNode } from 'react'
 import { useAppSelector } from '../src/stores/hooks'
 
 type Props = {
-  display?: string,
-  useMargin?: boolean,
-  children: ReactNode,
+  display?: string
+  useMargin?: boolean
+  children: ReactNode
   onClick?: Function
 }
 
-export default function NavBarItemPlain({ display = 'flex', useMargin = false, onClick, children }: Props) {
+export default function NavBarItemPlain({
+  display = 'flex',
+  useMargin = false,
+  onClick,
+  children,
+}: Props) {
   const navBarItemLabelStyle = useAppSelector((state) => state.style.navBarItemLabelStyle)
   const navBarItemLabelHoverStyle = useAppSelector((state) => state.style.navBarItemLabelHoverStyle)
 
@@ -19,9 +24,13 @@ export default function NavBarItemPlain({ display = 'flex', useMargin = false, o
 
   const handleClick = (e: React.MouseEvent) => {
     if (onClick) {
-      onClick(e);
+      onClick(e)
     }
   }
 
-  return <div className={`${classBase} ${classAddon}`} onClick={handleClick}>{children}</div>
+  return (
+    <div className={`${classBase} ${classAddon}`} onClick={handleClick}>
+      {children}
+    </div>
+  )
 }
