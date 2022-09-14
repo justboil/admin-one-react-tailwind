@@ -9,8 +9,6 @@ import NavBarItemPlain from '../NavBarItemPlain'
 import AsideMenu from '../AsideMenu'
 import FooterBar from '../FooterBar'
 import { setUser } from '../../src/stores/mainSlice'
-import GlobalStyle from '../globals/Style'
-import GlobalDarkMode from '../globals/DarkMode'
 import { useAppDispatch, useAppSelector } from '../../src/stores/hooks'
 
 type Props = {
@@ -39,53 +37,48 @@ export default function LayoutAuthenticated({ children }: Props) {
   const layoutAsidePadding = 'xl:pl-60'
 
   return (
-    <>
-      <GlobalStyle />
-      <GlobalDarkMode />
-
-      <div className={`${darkMode ? 'dark' : ''} overflow-hidden lg:overflow-visible`}>
-        <div
-          className={`${layoutAsidePadding} ${
-            isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''
-          } pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100`}
+    <div className={`${darkMode ? 'dark' : ''} overflow-hidden lg:overflow-visible`}>
+      <div
+        className={`${layoutAsidePadding} ${
+          isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''
+        } pt-14 min-h-screen w-screen transition-position lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100`}
+      >
+        <NavBar
+          menu={menuNavBar}
+          className={`${layoutAsidePadding} ${isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''}`}
         >
-          <NavBar
-            menu={menuNavBar}
-            className={`${layoutAsidePadding} ${isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''}`}
+          <NavBarItemPlain
+            display="flex lg:hidden"
+            onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
           >
-            <NavBarItemPlain
-              display="flex lg:hidden"
-              onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
-            >
-              <BaseIcon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
-            </NavBarItemPlain>
-            <NavBarItemPlain
-              display="hidden lg:flex xl:hidden"
-              onClick={() => setIsAsideLgActive(true)}
-            >
-              <BaseIcon path={mdiMenu} size="24" />
-            </NavBarItemPlain>
-          </NavBar>
-          <AsideMenu
-            isAsideMobileExpanded={isAsideMobileExpanded}
-            isAsideLgActive={isAsideLgActive}
-            menu={menuAside}
-            onAsideLgClose={() => setIsAsideLgActive(false)}
-          />
-          {children}
-          <FooterBar>
-            Get more with{` `}
-            <a
-              href="https://tailwind-vue.justboil.me/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600"
-            >
-              Premium version
-            </a>
-          </FooterBar>
-        </div>
+            <BaseIcon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
+          </NavBarItemPlain>
+          <NavBarItemPlain
+            display="hidden lg:flex xl:hidden"
+            onClick={() => setIsAsideLgActive(true)}
+          >
+            <BaseIcon path={mdiMenu} size="24" />
+          </NavBarItemPlain>
+        </NavBar>
+        <AsideMenu
+          isAsideMobileExpanded={isAsideMobileExpanded}
+          isAsideLgActive={isAsideLgActive}
+          menu={menuAside}
+          onAsideLgClose={() => setIsAsideLgActive(false)}
+        />
+        {children}
+        <FooterBar>
+          Get more with{` `}
+          <a
+            href="https://tailwind-vue.justboil.me/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-blue-600"
+          >
+            Premium version
+          </a>
+        </FooterBar>
       </div>
-    </>
+    </div>
   )
 }
