@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { ReactElement } from 'react'
 import CardBox from '../components/CardBox'
@@ -43,13 +44,18 @@ const StyleSelect = () => {
           </h2>
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 px-6 max-w-6xl mx-auto">
             {styles.map((style) => (
-              <CardBox key={style} className="cursor-pointer bg-gray-50" isHoverable>
+              <CardBox
+                key={style}
+                className="cursor-pointer bg-gray-50"
+                isHoverable
+                onClick={(e) => handleStylePick(e, style)}
+              >
                 <div className="mb-3 md:mb-6">
-                  <img
+                  <Image
                     src={`https://static.justboil.me/templates/one/small/${style}-v3.png`}
-                    width="1280"
-                    height="720"
-                    onClick={(e) => handleStylePick(e, style)}
+                    width={1280}
+                    height={720}
+                    alt={style}
                   />
                 </div>
                 <h1 className="text-xl md:text-2xl font-black capitalize">{style}</h1>

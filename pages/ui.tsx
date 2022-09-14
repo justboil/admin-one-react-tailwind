@@ -1,8 +1,8 @@
-import Head from "next/head"
-import { ReactElement } from "react"
-import LayoutAuthenticated from "../components/layouts/Authenticated"
-import SectionTitle from "../components/SectionTitle"
-import { appTitle } from "../src/config"
+import Head from 'next/head'
+import { ReactElement } from 'react'
+import LayoutAuthenticated from '../components/layouts/Authenticated'
+import SectionTitle from '../components/SectionTitle'
+import { appTitle } from '../src/config'
 
 const UiPage = () => {
   return (

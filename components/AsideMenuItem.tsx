@@ -33,7 +33,7 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
 
       setIsLinkActive(linkPathName === activePathname)
     }
-  })
+  }, [item.href, isReady, asPath])
 
   const asideMenuItemInnerContents = (
     <>

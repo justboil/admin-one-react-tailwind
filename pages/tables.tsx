@@ -1,15 +1,15 @@
-import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from "@mdi/js";
-import Head from "next/head";
-import React, { ReactElement } from "react";
-import BaseButton from "../components/BaseButton";
-import CardBox from "../components/CardBox";
-import CardBoxComponentEmpty from "../components/CardBoxComponentEmpty";
-import LayoutAuthenticated from "../components/layouts/Authenticated";
-import NotificationBar from "../components/NotificationBar";
-import SectionMain from "../components/SectionMain";
-import SectionTitleLineWithButton from "../components/SectionTitleLineWithButton";
-import TableSampleClients from "../components/TableSampleClients";
-import { appTitle } from "../src/config";
+import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from '@mdi/js'
+import Head from 'next/head'
+import React, { ReactElement } from 'react'
+import BaseButton from '../components/BaseButton'
+import CardBox from '../components/CardBox'
+import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
+import LayoutAuthenticated from '../components/layouts/Authenticated'
+import NotificationBar from '../components/NotificationBar'
+import SectionMain from '../components/SectionMain'
+import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
+import TableSampleClients from '../components/TableSampleClients'
+import { appTitle } from '../src/config'
 
 const TablesPage = () => {
   return (
@@ -41,7 +41,7 @@ const TablesPage = () => {
         <SectionTitleLineWithButton icon={mdiTableOff} title="Empty variation" />
 
         <NotificationBar color="danger" icon={mdiTableOff}>
-          <b>Empty card.</b> When there's nothing to show
+          <b>Empty card.</b> When there&apos;s nothing to show
         </NotificationBar>
 
         <CardBox>
@@ -56,4 +56,4 @@ TablesPage.getLayout = function getLayout(page: ReactElement) {
   return <LayoutAuthenticated>{page}</LayoutAuthenticated>
 }
 
-export default TablesPage;
+export default TablesPage

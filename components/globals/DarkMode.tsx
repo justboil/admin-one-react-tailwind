@@ -8,15 +8,17 @@ export default function GlobalDarkMode() {
 
   useEffect(() => {
     const isSetInLocalStorage =
-    typeof localStorage !== 'undefined' && localStorage[localStorageDarkModeKey]
+      typeof localStorage !== 'undefined' && localStorage[localStorageDarkModeKey]
 
     const isSetInMedia =
       typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches
 
     dispatch(
-      setDarkMode(isSetInLocalStorage ? localStorage[localStorageDarkModeKey] === '1' : isSetInMedia)
+      setDarkMode(
+        isSetInLocalStorage ? localStorage[localStorageDarkModeKey] === '1' : isSetInMedia
+      )
     )
   })
-  
+
   return null
 }
