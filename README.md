@@ -109,10 +109,10 @@ npm run dev
 npm run build
 ```
 
-#### Builds and exports
+#### Exports build for static hosts
 
 ```
-npm run deploy
+npm run export
 ```
 
 ### Linting & Formatting
