@@ -68,14 +68,14 @@ export default function LayoutAuthenticated({ children }: Props) {
         />
         {children}
         <FooterBar>
-          Get more with{` `}
+          Code on{` `}
           <a
             href="https://tailwind-vue.justboil.me/"
             target="_blank"
             rel="noreferrer"
             className="text-blue-600"
           >
-            Premium version
+            GitHub
           </a>
         </FooterBar>
       </div>
