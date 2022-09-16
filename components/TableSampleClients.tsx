@@ -61,8 +61,8 @@ const TableSampleClients = () => {
               </td>
               <td className="before:hidden lg:w-1 whitespace-nowrap">
                 <BaseButtons type="justify-start lg:justify-end" noWrap>
-                  <BaseButton color="info" icon={mdiEye} small isGrouped />
-                  <BaseButton color="danger" icon={mdiTrashCan} small isGrouped />
+                  <BaseButton color="info" icon={mdiEye} small />
+                  <BaseButton color="danger" icon={mdiTrashCan} small />
                 </BaseButtons>
               </td>
             </tr>
@@ -79,7 +79,6 @@ const TableSampleClients = () => {
                 label={page + 1}
                 color={page === currentPage ? 'lightDark' : 'whiteDark'}
                 small
-                isGrouped
                 onClick={() => setCurrentPage(page)}
               />
             ))}
