@@ -8,11 +8,17 @@ type Props = {
   children: ReactNode
 }
 
-const BaseButtons = ({ type = 'justify-start', mb = '-mb-3', classAddon = 'mr-3 last:mr-0 mb-3', noWrap = false, children }: Props) => {
+const BaseButtons = ({
+  type = 'justify-start',
+  mb = '-mb-3',
+  classAddon = 'mr-3 last:mr-0 mb-3',
+  noWrap = false,
+  children,
+}: Props) => {
   return (
     <div className={`flex items-center ${type} ${mb} ${noWrap ? 'flex-nowrap' : 'flex-wrap'}`}>
       {Children.map(children, (child: ReactElement) =>
-        cloneElement(child, {className: classAddon})
+        cloneElement(child, { className: classAddon })
       )}
     </div>
   )

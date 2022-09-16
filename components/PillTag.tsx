@@ -12,7 +12,7 @@ type Props = {
   className?: string
 }
 
-const PillTag = ({ small = false, outline = false, className='', ...props }: Props) => {
+const PillTag = ({ small = false, outline = false, className = '', ...props }: Props) => {
   const layoutClassName = small ? 'py-1 px-3' : 'py-1.5 px-4'
   const colorClassName = outline ? colorsOutline[props.color] : colorsBgLight[props.color]
 
