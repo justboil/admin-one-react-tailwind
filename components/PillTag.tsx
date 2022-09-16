@@ -9,17 +9,16 @@ type Props = {
   icon?: string
   small?: boolean
   outline?: boolean
-  isGrouped?: boolean
+  className?: string
 }
 
-const PillTag = ({ small = false, outline = false, isGrouped = false, ...props }: Props) => {
+const PillTag = ({ small = false, outline = false, className='', ...props }: Props) => {
   const layoutClassName = small ? 'py-1 px-3' : 'py-1.5 px-4'
   const colorClassName = outline ? colorsOutline[props.color] : colorsBgLight[props.color]
-  const groupedClassName = isGrouped ? 'mr-3 last:mr-0 mb-3' : ''
 
   return (
     <PillTagPlain
-      className={`border rounded-full ${layoutClassName} ${colorClassName} ${groupedClassName}`}
+      className={`border rounded-full ${layoutClassName} ${colorClassName} ${className}`}
       icon={props.icon}
       label={props.label}
       small={small}

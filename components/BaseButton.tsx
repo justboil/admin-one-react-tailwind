@@ -19,7 +19,6 @@ type Props = {
   active?: boolean
   disabled?: boolean
   roundedFull?: boolean
-  isGrouped?: boolean
   onClick?: (e: React.MouseEvent) => void
 }
 
@@ -38,7 +37,6 @@ export default function BaseButton({
   active = false,
   disabled = false,
   roundedFull = false,
-  isGrouped = false,
   onClick,
 }: Props) {
   const componentClass = [
@@ -67,10 +65,6 @@ export default function BaseButton({
 
   if (disabled) {
     componentClass.push(outline ? 'opacity-50' : 'opacity-70')
-  }
-
-  if (isGrouped) {
-    componentClass.push('mr-3 last:mr-0 mb-3')
   }
 
   const componentClassString = componentClass.join(' ')
