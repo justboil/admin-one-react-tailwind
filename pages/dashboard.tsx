@@ -49,7 +49,7 @@ const Dashboard = () => {
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
           <BaseButton
-            href="https://github.com/justboil/admin-one-vue-tailwind"
+            href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
             icon={mdiGithub}
             label="Start on GitHub"
