@@ -4,12 +4,12 @@ type Props = {
   children: ReactNode
   type: 'checkbox' | 'radio' | 'switch'
   label?: string
-  isGrouped?: boolean
+  className?: string
 }
 
 const FormCheckRadio = (props: Props) => {
   return (
-    <label className={`${props.type} ${props.isGrouped ? 'mr-6 mb-3 last:mr-0' : ''}`}>
+    <label className={`${props.type} ${props.className}`}>
       {props.children}
       <span className="check" />
       <span className="pl-2">{props.label}</span>
