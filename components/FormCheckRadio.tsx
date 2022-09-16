@@ -1,8 +1,8 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
-  type: "checkbox" | "radio" | "switch"
+  type: 'checkbox' | 'radio' | 'switch'
   label?: string
   isGrouped?: boolean
 }
@@ -12,7 +12,7 @@ const FormCheckRadio = (props: Props) => {
     <label className={`${props.type} ${props.isGrouped ? 'mr-6 mb-3 last:mr-0' : ''}`}>
       {props.children}
       <span className="check" />
-      <span className="pl-2">{ props.label }</span>
+      <span className="pl-2">{props.label}</span>
     </label>
   )
 }

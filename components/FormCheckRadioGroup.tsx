@@ -1,7 +1,7 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 type Props = {
-  isColumn?: boolean,
+  isColumn?: boolean
   children: ReactNode
 }
 
