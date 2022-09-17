@@ -24,6 +24,7 @@
 
 ## Table of Contents
 
+* [Vue version](#looking-for-vue-version)
 * [Responsive layout](#responsive-layout)
   * [Mobile & tablet](#mobile--tablet)
   * [Small laptops](#small-laptops-1024px)
@@ -40,6 +41,12 @@
 * [Reporting Issues](#reporting-issues)
 * [Licensing](#licensing)
 * [Useful Links](#useful-links)
+
+## Looking for Vue version?
+
+This is **Tailwind React TypeScript** version
+
+Looking for **Tailwind Vue**? Check [Admin One - Vue Tailwind dashboard](https://github.com/justboil/admin-one-vue-tailwind) version
 
 ## Responsive layout
 
