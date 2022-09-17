@@ -92,7 +92,7 @@ export default function NavBarItem({ item }: Props) {
 
   if (item.href) {
     return (
-      <Link href={item.href}>
+      <Link href={item.href} target={item.target}>
         <a className={componentClass}>{NavBarItemComponentContents}</a>
       </Link>
     )
