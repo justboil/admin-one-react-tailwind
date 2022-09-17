@@ -9,6 +9,7 @@ import {
   mdiLogout,
   mdiThemeLightDark,
   mdiGithub,
+  mdiVuejs,
 } from '@mdi/js'
 import { MenuNavBarItem } from '../interfaces'
 
@@ -71,6 +72,14 @@ const menuNavBar: MenuNavBarItem[] = [
     label: 'GitHub',
     isDesktopNoLabel: true,
     href: 'https://github.com/justboil/admin-one-react-tailwind',
+    target: '_blank',
+  },
+  {
+    icon: mdiVuejs,
+    label: 'Vue version',
+    isDesktopNoLabel: true,
+    href: 'https://github.com/justboil/admin-one-vue-tailwind',
+    target: '_blank',
   },
   {
     icon: mdiLogout,
