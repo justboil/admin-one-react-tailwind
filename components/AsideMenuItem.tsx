@@ -68,8 +68,8 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
   return (
     <li>
       {item.href && (
-        <Link href={item.href} target={item.target} passHref>
-          <a className={componentClass}>{asideMenuItemInnerContents}</a>
+        <Link href={item.href} target={item.target} className={componentClass}>
+          {asideMenuItemInnerContents}
         </Link>
       )}
       {!item.href && (
