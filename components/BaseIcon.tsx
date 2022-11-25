@@ -15,7 +15,7 @@ export default function BaseIcon({
   h = 'h-6',
   size = null,
   className = '',
-  children
+  children,
 }: Props) {
   const iconSize = size ?? 16
 
