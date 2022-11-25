@@ -34,7 +34,7 @@ const TablesPage = () => {
           <b>Responsive table.</b> Collapses on mobile
         </NotificationBar>
 
-        <CardBox className="mb-6" has-table>
+        <CardBox className="mb-6" hasTable>
           <TableSampleClients />
         </CardBox>
 
