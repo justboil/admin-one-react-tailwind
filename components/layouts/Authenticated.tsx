@@ -70,7 +70,7 @@ export default function LayoutAuthenticated({ children }: Props) {
         <FooterBar>
           Code on{` `}
           <a
-            href="https://tailwind-vue.justboil.me/"
+            href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
             rel="noreferrer"
             className="text-blue-600"
