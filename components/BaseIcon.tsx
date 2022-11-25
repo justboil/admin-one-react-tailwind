@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
 type Props = {
   path: string
@@ -6,6 +6,7 @@ type Props = {
   h?: string
   size?: string | number | null
   className?: string
+  children?: ReactNode
 }
 
 export default function BaseIcon({
@@ -14,6 +15,7 @@ export default function BaseIcon({
   h = 'h-6',
   size = null,
   className = '',
+  children
 }: Props) {
   const iconSize = size ?? 16
 
@@ -22,6 +24,7 @@ export default function BaseIcon({
       <svg viewBox="0 0 24 24" width={iconSize} height={iconSize} className="inline-block">
         <path fill="currentColor" d={path} />
       </svg>
+      {children}
     </span>
   )
 }
