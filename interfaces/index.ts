@@ -9,7 +9,7 @@ export type MenuAsideItem = {
   icon?: string
   href?: string
   target?: string
-  color?: string
+  color?: ColorButtonKey
   isLogout?: boolean
   menu?: MenuAsideItem[]
 }
