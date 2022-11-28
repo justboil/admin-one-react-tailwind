@@ -1,6 +1,5 @@
 import React, { ReactNode } from 'react'
 import { containerMaxW } from '../src/config'
-import BaseLevel from './BaseLevel'
 import JustboilLogo from './justboil/Logo'
 
 type Props = {
@@ -12,7 +11,7 @@ export default function FooterBar({ children }: Props) {
 
   return (
     <footer className={`py-2 px-6 ${containerMaxW}`}>
-      <BaseLevel>
+      <div className='block md:flex items-center justify-between'>
         <div className="text-center md:text-left mb-6 md:mb-0">
           <b>
             &copy;{year},{` `}
@@ -26,10 +25,10 @@ export default function FooterBar({ children }: Props) {
         </div>
         <div className="md:py-2">
           <a href="https://justboil.me" rel="noreferrer" target="_blank">
-            <JustboilLogo className="w-auto h-8 md:h-6" />
+            <JustboilLogo className="w-auto h-8 md:h-6 mx-auto" />
           </a>
         </div>
-      </BaseLevel>
+      </div>
     </footer>
   )
 }
