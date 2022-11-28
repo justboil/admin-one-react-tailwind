@@ -18,7 +18,7 @@ const BaseButtons = ({
   return (
     <div className={`flex items-center ${type} ${mb} ${noWrap ? 'flex-nowrap' : 'flex-wrap'}`}>
       {Children.map(children, (child: ReactElement) =>
-        cloneElement(child, { className: classAddon })
+        cloneElement(child, { className: `${classAddon} ${child.props.className}` })
       )}
     </div>
   )
