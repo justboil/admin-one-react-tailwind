@@ -35,7 +35,12 @@ export const colorsOutline = {
   info: [colorsText.info, 'border-blue-500'].join(' '),
 }
 
-export const getButtonColor = (color:ColorButtonKey, isOutlined:boolean, hasHover:boolean, isActive = false) => {
+export const getButtonColor = (
+  color: ColorButtonKey,
+  isOutlined: boolean,
+  hasHover: boolean,
+  isActive = false
+) => {
   if (color === 'void') {
     return ''
   }
