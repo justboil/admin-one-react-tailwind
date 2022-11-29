@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 
 type Props = {
   title: string
-  children: ReactNode
+  children?: ReactNode
 }
 
 const CardBoxComponentTitle = ({ title, children }: Props) => {
