@@ -4,6 +4,7 @@ import { useSampleClients } from '../hooks/sampleData'
 import { Client } from '../interfaces'
 import BaseButton from './BaseButton'
 import BaseButtons from './BaseButtons'
+import CardBoxModal from './CardBoxModal'
 import UserAvatar from './UserAvatar'
 
 const TableSampleClients = () => {
@@ -23,8 +24,26 @@ const TableSampleClients = () => {
     pagesList.push(i)
   }
 
+  const [isActiveModalInfo, setIsActiveModalInfo] = useState(false)
+  const [isActiveModalTrash, setIsActiveModalTrash] = useState(false)
+
+  const handleModalAction = () => {
+    setIsActiveModalInfo(false)
+    setIsActiveModalTrash(false)
+  }
+
   return (
     <>
+      <CardBoxModal title='Sample modal' buttonColor='info' buttonLabel='Done' isActive={isActiveModalInfo} onConfirm={handleModalAction}>
+        <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+        <p>This is sample modal</p>
+      </CardBoxModal>
+
+      <CardBoxModal title='Please confirm' buttonColor='danger' buttonLabel='Confirm' isActive={isActiveModalTrash} onConfirm={handleModalAction} onCancel={handleModalAction}>
+        <p>Lorem ipsum dolor sit amet <b>adipiscing elit</b></p>
+        <p>This is sample modal</p>
+      </CardBoxModal>
+
       <table>
         <thead>
           <tr>
@@ -60,8 +79,8 @@ const TableSampleClients = () => {
               </td>
               <td className="before:hidden lg:w-1 whitespace-nowrap">
                 <BaseButtons type="justify-start lg:justify-end" noWrap>
-                  <BaseButton color="info" icon={mdiEye} small />
-                  <BaseButton color="danger" icon={mdiTrashCan} small />
+                  <BaseButton color="info" icon={mdiEye} onClick={() => setIsActiveModalInfo(true)} small />
+                  <BaseButton color="danger" icon={mdiTrashCan} onClick={() => setIsActiveModalTrash(true)} small />
                 </BaseButtons>
               </td>
             </tr>
