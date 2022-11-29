@@ -1,4 +1,5 @@
-import React, { Children, cloneElement, ReactElement, ReactNode } from 'react'
+import { Children, cloneElement, ReactElement } from 'react'
+import type {ReactNode} from 'react'
 
 type Props = {
   type?: string
@@ -18,7 +19,7 @@ const BaseButtons = ({
   return (
     <div className={`flex items-center ${type} ${mb} ${noWrap ? 'flex-nowrap' : 'flex-wrap'}`}>
       {Children.map(children, (child: ReactElement) =>
-        cloneElement(child, { className: `${classAddon} ${child.props.className}` })
+        child ? cloneElement(child, { className: `${classAddon} ${child.props.className}` }) : null
       )}
     </div>
   )
