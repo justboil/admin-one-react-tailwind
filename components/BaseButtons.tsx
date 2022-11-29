@@ -1,5 +1,5 @@
 import { Children, cloneElement, ReactElement } from 'react'
-import type {ReactNode} from 'react'
+import type { ReactNode } from 'react'
 
 type Props = {
   type?: string
