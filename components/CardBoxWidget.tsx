@@ -4,7 +4,6 @@ import { ColorKey, TrendType } from '../interfaces'
 import { colorsText } from '../src/colors'
 import BaseButton from './BaseButton'
 import BaseIcon from './BaseIcon'
-import BaseLevel from './BaseLevel'
 import CardBox from './CardBox'
 import PillTagTrend from './PillTagTrend'
 
@@ -24,7 +23,7 @@ const CardBoxWidget = (props: Props) => {
   return (
     <CardBox>
       {props.trendLabel && props.trendType && props.trendColor && (
-        <BaseLevel className="mb-3" mobile>
+        <div className="flex items-center justify-between mb-3">
           <PillTagTrend
             label={props.trendLabel}
             type={props.trendType}
@@ -32,9 +31,9 @@ const CardBoxWidget = (props: Props) => {
             small
           />
           <BaseButton icon={mdiCog} color="lightDark" small />
-        </BaseLevel>
+        </div>
       )}
-      <BaseLevel mobile>
+      <div className="flex items-center justify-between">
         <div>
           <h3 className="text-lg leading-tight text-gray-500 dark:text-slate-400">{props.label}</h3>
           <h1 className="text-3xl leading-tight font-semibold">
@@ -52,7 +51,7 @@ const CardBoxWidget = (props: Props) => {
             className={colorsText[props.iconColor]}
           />
         )}
-      </BaseLevel>
+      </div>
     </CardBox>
   )
 }

@@ -4,7 +4,6 @@ import { useSampleClients } from '../hooks/sampleData'
 import { Client } from '../interfaces'
 import BaseButton from './BaseButton'
 import BaseButtons from './BaseButtons'
-import BaseLevel from './BaseLevel'
 import UserAvatar from './UserAvatar'
 
 const TableSampleClients = () => {
@@ -70,7 +69,7 @@ const TableSampleClients = () => {
         </tbody>
       </table>
       <div className="p-3 lg:px-6 border-t border-gray-100 dark:border-slate-800">
-        <BaseLevel>
+        <div className="flex flex-col md:flex-row items-center justify-between py-3 md:py-0">
           <BaseButtons>
             {pagesList.map((page) => (
               <BaseButton
@@ -83,10 +82,10 @@ const TableSampleClients = () => {
               />
             ))}
           </BaseButtons>
-          <small>
+          <small className="mt-6 md:mt-0">
             Page {currentPage + 1} of {numPages}
           </small>
-        </BaseLevel>
+        </div>
       </div>
     </>
   )

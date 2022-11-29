@@ -4,7 +4,6 @@ import { ColorKey } from '../interfaces'
 import { colorsBgLight, colorsOutline } from '../src/colors'
 import BaseButton from './BaseButton'
 import BaseIcon from './BaseIcon'
-import BaseLevel from './BaseLevel'
 
 type Props = {
   color: ColorKey
@@ -33,8 +32,8 @@ const NotificationBar = ({ outline = false, children, ...props }: Props) => {
     <div
       className={`px-3 py-6 md:py-3 mb-6 last:mb-0 border rounded-lg transition-colors duration-150 ${componentColorClass}`}
     >
-      <BaseLevel>
-        <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <div className="flex flex-col md:flex-row items-center mb-6 md:mb-0">
           {props.icon && (
             <BaseIcon
               path={props.icon}
@@ -50,7 +49,7 @@ const NotificationBar = ({ outline = false, children, ...props }: Props) => {
         {!props.button && (
           <BaseButton icon={mdiClose} color="white" onClick={dismiss} small roundedFull />
         )}
-      </BaseLevel>
+      </div>
     </div>
   )
 }
