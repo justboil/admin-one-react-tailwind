@@ -1,4 +1,4 @@
-import { mdiAccount, mdiBallotOutline, mdiGithub, mdiMail } from '@mdi/js'
+import { mdiAccount, mdiBallotOutline, mdiGithub, mdiMail, mdiUpload } from '@mdi/js'
 import { Field, Form, Formik } from 'formik'
 import Head from 'next/head'
 import { ReactElement } from 'react'
@@ -9,6 +9,7 @@ import CardBox from '../components/CardBox'
 import FormCheckRadio from '../components/FormCheckRadio'
 import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
 import FormField from '../components/FormField'
+import FormFilePicker from '../components/FormFilePicker'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionMain from '../components/SectionMain'
 import SectionTitle from '../components/SectionTitle'
@@ -135,6 +136,10 @@ const FormsPage = () => {
               </FormField>
             </Form>
           </Formik>
+          <BaseDivider />
+          <FormField>
+            <FormFilePicker label="Upload" color="info" icon={mdiUpload} />
+          </FormField>
         </CardBox>
       </SectionMain>
     </>
