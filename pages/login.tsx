@@ -5,13 +5,13 @@ import BaseButton from '../components/BaseButton'
 import CardBox from '../components/CardBox'
 import SectionFullScreen from '../components/SectionFullScreen'
 import LayoutGuest from '../components/layouts/Guest'
-import { appTitle } from '../src/config'
 import { Field, Form, Formik } from 'formik'
 import FormField from '../components/FormField'
 import FormCheckRadio from '../components/FormCheckRadio'
 import BaseDivider from '../components/BaseDivider'
 import BaseButtons from '../components/BaseButtons'
 import { useRouter } from 'next/router'
+import { getPageTitle } from '../src/app'
 
 export default function Error() {
   const router = useRouter()
@@ -23,7 +23,7 @@ export default function Error() {
   return (
     <>
       <Head>
-        <title>Login - {appTitle}</title>
+        <title>{getPageTitle('Login')}</title>
       </Head>
 
       <SectionFullScreen bg="purplePink">

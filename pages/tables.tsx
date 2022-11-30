@@ -9,13 +9,13 @@ import NotificationBar from '../components/NotificationBar'
 import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import TableSampleClients from '../components/TableSampleClients'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 
 const TablesPage = () => {
   return (
     <>
       <Head>
-        <title>Tables - {appTitle}</title>
+        <title>{getPageTitle('Tables')}</title>
       </Head>
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiTableBorder} title="Tables" main>

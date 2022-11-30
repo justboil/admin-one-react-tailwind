@@ -2,13 +2,13 @@ import Head from 'next/head'
 import { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionTitle from '../components/SectionTitle'
-import { appTitle } from '../src/config'
+import { getPageTitle } from '../src/app'
 
 const ProfilePage = () => {
   return (
     <>
       <Head>
-        <title>Profile - {appTitle}</title>
+        <title>{getPageTitle('Profile')}</title>
       </Head>
 
       <div className="min-h-screen">

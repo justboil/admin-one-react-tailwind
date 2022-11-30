@@ -28,9 +28,9 @@ import PillTag from '../components/PillTag'
 import SectionMain from '../components/SectionMain'
 import SectionTitle from '../components/SectionTitle'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
-import { appTitle } from '../src/config'
 import { useAppDispatch } from '../src/stores/hooks'
 import { setDarkMode } from '../src/stores/styleSlice'
+import { getPageTitle } from '../src/app'
 
 const UiPage = () => {
   const dispatch = useAppDispatch()
@@ -85,7 +85,7 @@ const UiPage = () => {
   return (
     <>
       <Head>
-        <title>UI - {appTitle}</title>
+        <title>{getPageTitle('UI')}</title>
       </Head>
 
       <SectionTitle first>Dark mode</SectionTitle>
