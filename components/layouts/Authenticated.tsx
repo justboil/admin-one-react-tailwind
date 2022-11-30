@@ -10,6 +10,8 @@ import AsideMenu from '../AsideMenu'
 import FooterBar from '../FooterBar'
 import { setUser } from '../../src/stores/mainSlice'
 import { useAppDispatch, useAppSelector } from '../../src/stores/hooks'
+import FormField from '../FormField'
+import { Field, Form, Formik } from 'formik'
 
 type Props = {
   children: ReactNode
@@ -58,6 +60,20 @@ export default function LayoutAuthenticated({ children }: Props) {
             onClick={() => setIsAsideLgActive(true)}
           >
             <BaseIcon path={mdiMenu} size="24" />
+          </NavBarItemPlain>
+          <NavBarItemPlain useMargin>
+            <Formik
+              initialValues={{
+                search: '',
+              }}
+              onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
+            >
+              <Form>
+                <FormField isBorderless isTransparent>
+                  <Field name="search" placeholder="Search" />
+                </FormField>
+              </Form>
+            </Formik>
           </NavBarItemPlain>
         </NavBar>
         <AsideMenu
