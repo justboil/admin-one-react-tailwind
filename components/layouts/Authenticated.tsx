@@ -12,6 +12,7 @@ import { setUser } from '../../src/stores/mainSlice'
 import { useAppDispatch, useAppSelector } from '../../src/stores/hooks'
 import FormField from '../FormField'
 import { Field, Form, Formik } from 'formik'
+import { useRouter } from 'next/router'
 
 type Props = {
   children: ReactNode
@@ -35,6 +36,23 @@ export default function LayoutAuthenticated({ children }: Props) {
 
   const [isAsideMobileExpanded, setIsAsideMobileExpanded] = useState(false)
   const [isAsideLgActive, setIsAsideLgActive] = useState(false)
+
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChangeStart = () => {
+      setIsAsideMobileExpanded(false)
+      setIsAsideLgActive(false)
+    }
+
+    router.events.on('routeChangeStart', handleRouteChangeStart)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChangeStart)
+    }
+  }, [router.events, dispatch])
 
   const layoutAsidePadding = 'xl:pl-60'
 
