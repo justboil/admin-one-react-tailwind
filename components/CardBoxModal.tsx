@@ -45,7 +45,9 @@ const CardBoxModal = ({
         footer={footer}
       >
         <CardBoxComponentTitle title={title}>
-          {!!onCancel && <BaseButton icon={mdiClose} color="whiteDark" small roundedFull />}
+          {!!onCancel && (
+            <BaseButton icon={mdiClose} color="whiteDark" onClick={onCancel} small roundedFull />
+          )}
         </CardBoxComponentTitle>
 
         <div className="space-y-3">{children}</div>
