@@ -123,7 +123,7 @@ const ProfilePage = () => {
                       name="currentPassword"
                       id="currentPassword"
                       type="password"
-                      autocomplete="current-password"
+                      autoComplete="current-password"
                     />
                   </FormField>
 
@@ -139,7 +139,7 @@ const ProfilePage = () => {
                       name="newPassword"
                       id="newPassword"
                       type="password"
-                      autocomplete="new-password"
+                      autoComplete="new-password"
                     />
                   </FormField>
 
@@ -153,7 +153,7 @@ const ProfilePage = () => {
                       name="newPasswordConfirmation"
                       id="newPasswordConfirmation"
                       type="password"
-                      autocomplete="new-password"
+                      autoComplete="new-password"
                     />
                   </FormField>
                 </CardBoxComponentBody>
