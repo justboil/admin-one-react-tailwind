@@ -3,7 +3,7 @@ import { ColorButtonKey } from '../interfaces'
 import BaseButton from './BaseButton'
 
 type Props = {
-  label: string
+  label?: string
   icon?: string
   accept?: string
   color: ColorButtonKey
