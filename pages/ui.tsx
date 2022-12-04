@@ -30,7 +30,7 @@ import SectionTitle from '../components/SectionTitle'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import { useAppDispatch } from '../src/stores/hooks'
 import { setDarkMode } from '../src/stores/styleSlice'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 const UiPage = () => {
   const dispatch = useAppDispatch()

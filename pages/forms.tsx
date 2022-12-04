@@ -14,7 +14,7 @@ import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionMain from '../components/SectionMain'
 import SectionTitle from '../components/SectionTitle'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 const FormsPage = () => {
   return (

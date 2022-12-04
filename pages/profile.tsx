@@ -22,7 +22,7 @@ import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import UserCard from '../components/UserCard'
 import type { UserForm } from '../interfaces'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 import { useAppSelector } from '../src/stores/hooks'
 
 const ProfilePage = () => {

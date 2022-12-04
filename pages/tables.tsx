@@ -9,7 +9,7 @@ import NotificationBar from '../components/NotificationBar'
 import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import TableSampleClients from '../components/TableSampleClients'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 const TablesPage = () => {
   return (

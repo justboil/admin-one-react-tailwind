@@ -11,7 +11,7 @@ import FormCheckRadio from '../components/FormCheckRadio'
 import BaseDivider from '../components/BaseDivider'
 import BaseButtons from '../components/BaseButtons'
 import { useRouter } from 'next/router'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 export default function Error() {
   const router = useRouter()

@@ -5,7 +5,7 @@ import BaseButton from '../components/BaseButton'
 import CardBox from '../components/CardBox'
 import SectionFullScreen from '../components/SectionFullScreen'
 import LayoutGuest from '../components/layouts/Guest'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 export default function Error() {
   return (

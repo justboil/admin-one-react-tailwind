@@ -25,7 +25,7 @@ import { sampleChartData } from '../components/charts/config'
 import ChartLineSample from '../components/charts/LineSample'
 import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/TableSampleClients'
-import { getPageTitle } from '../src/app'
+import { getPageTitle } from '../src/config'
 
 const Dashboard = () => {
   const { clients } = useSampleClients()

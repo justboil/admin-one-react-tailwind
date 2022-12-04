@@ -4,8 +4,7 @@ import React, { ReactElement } from 'react'
 import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionMain from '../components/SectionMain'
 import SectionTitle from '../components/SectionTitle'
-import { getPageTitle } from '../src/app'
-import { appTitle } from '../src/config'
+import { appTitle, getPageTitle } from '../src/config'
 
 const ResponsivePage = () => {
   return (
