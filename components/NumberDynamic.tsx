@@ -15,29 +15,31 @@ const NumberDynamic = ({ prefix = '', suffix = '', value, duration = 500 }: Prop
 
   const stepDurationMs = 25
 
+  const timeoutIds = []
+
   const grow = (growIncrement: number) => {
-    const v = Math.ceil(newValue + growIncrement)
+    const incrementedStep = Math.ceil(newValue + growIncrement)
 
-    console.log(v)
-
-    if (v > value) {
+    if (incrementedStep > value) {
       setNewValue(value)
       return false
     }
 
-    setNewValue(v)
+    setNewValue(incrementedStep)
 
-    setTimeout(() => {
+    timeoutIds.push(setTimeout(() => {
       grow(growIncrement)
-    }, stepDurationMs)
-  }
-
-  const growInit = () => {
-    grow(value / (duration / stepDurationMs))
+    }, stepDurationMs))
   }
 
   useEffect(() => {
-    growInit()
+    grow(value / (duration / stepDurationMs))
+
+    return () => {
+      timeoutIds.forEach(tid => {
+        clearTimeout(tid)
+      })
+    }
   })
 
   return (
