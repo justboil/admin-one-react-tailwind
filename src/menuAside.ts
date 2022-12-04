@@ -12,7 +12,7 @@ import {
   mdiPalette,
   mdiVuejs,
 } from '@mdi/js'
-import { MenuAsideItem } from '../interfaces'
+import { MenuAsideItem } from './interfaces'
 
 const menuAside: MenuAsideItem[] = [
   {

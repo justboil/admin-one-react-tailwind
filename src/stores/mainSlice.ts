@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { UserPayloadObject } from '../../interfaces'
+import { UserPayloadObject } from '../interfaces'
 
 interface MainState {
   userName: string
