@@ -27,16 +27,18 @@ const NumberDynamic = ({ prefix = '', suffix = '', value, duration = 500 }: Prop
 
     setNewValue(incrementedStep)
 
-    timeoutIds.push(setTimeout(() => {
-      grow(growIncrement)
-    }, stepDurationMs))
+    timeoutIds.push(
+      setTimeout(() => {
+        grow(growIncrement)
+      }, stepDurationMs)
+    )
   }
 
   useEffect(() => {
     grow(value / (duration / stepDurationMs))
 
     return () => {
-      timeoutIds.forEach(tid => {
+      timeoutIds.forEach((tid) => {
         clearTimeout(tid)
       })
     }

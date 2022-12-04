@@ -38,7 +38,11 @@ const CardBoxWidget = (props: Props) => {
         <div>
           <h3 className="text-lg leading-tight text-gray-500 dark:text-slate-400">{props.label}</h3>
           <h1 className="text-3xl leading-tight font-semibold">
-            <NumberDynamic value={props.number} prefix={props.numberPrefix} suffix={props.numberSuffix} />
+            <NumberDynamic
+              value={props.number}
+              prefix={props.numberPrefix}
+              suffix={props.numberSuffix}
+            />
           </h1>
         </div>
         {props.icon && (
