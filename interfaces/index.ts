@@ -69,3 +69,8 @@ export type Client = {
 }
 
 export type StyleKey = 'white' | 'basic'
+
+export type UserForm = {
+  name: string
+  email: string
+}

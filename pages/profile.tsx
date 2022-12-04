@@ -21,13 +21,9 @@ import LayoutAuthenticated from '../components/layouts/Authenticated'
 import SectionMain from '../components/SectionMain'
 import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
 import UserCard from '../components/UserCard'
+import type { UserForm } from '../interfaces'
 import { getPageTitle } from '../src/app'
 import { useAppSelector } from '../src/stores/hooks'
-
-type UserForm = {
-  name: string
-  email: string
-}
 
 const ProfilePage = () => {
   const userName = useAppSelector((state) => state.main.userName)
