@@ -3,45 +3,43 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: [
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     asideScrollbars: {
       light: 'light',
-      gray: 'gray'
+      gray: 'gray',
     },
     extend: {
       zIndex: {
-        '-1': '-1'
+        '-1': '-1',
       },
       flexGrow: {
-        5: '5'
+        5: '5',
       },
       maxHeight: {
         'screen-menu': 'calc(100vh - 3.5rem)',
-        modal: 'calc(100vh - 160px)'
+        modal: 'calc(100vh - 160px)',
       },
       transitionProperty: {
         position: 'right, left, top, bottom, margin, padding',
-        textColor: 'color'
+        textColor: 'color',
       },
       keyframes: {
         'fade-out': {
           from: { opacity: 1 },
-          to: { opacity: 0 }
+          to: { opacity: 0 },
         },
         'fade-in': {
           from: { opacity: 0 },
-          to: { opacity: 1 }
-        }
+          to: { opacity: 1 },
+        },
       },
       animation: {
         'fade-out': 'fade-out 250ms ease-in-out',
-        'fade-in': 'fade-in 250ms ease-in-out'
-      }
-    }
+        'fade-in': 'fade-in 250ms ease-in-out',
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
@@ -60,21 +58,20 @@ module.exports = {
               )}`,
               '&::-webkit-scrollbar': {
                 width: '8px',
-                height: '8px'
+                height: '8px',
               },
               '&::-webkit-scrollbar-track': {
-                backgroundColor: theme(`colors.${color}.${track}`)
+                backgroundColor: theme(`colors.${color}.${track}`),
               },
               '&::-webkit-scrollbar-thumb': {
                 borderRadius: '0.25rem',
-                backgroundColor: theme(`colors.${color}.${thumb}`)
-              }
+                backgroundColor: theme(`colors.${color}.${thumb}`),
+              },
             }
-          }
+          },
         },
         { values: theme('asideScrollbars') }
       )
     }),
-    require('@tailwindcss/line-clamp')
-  ]
+  ],
 }
