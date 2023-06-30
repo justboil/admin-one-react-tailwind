@@ -2,18 +2,18 @@ import { mdiAccount, mdiBallotOutline, mdiGithub, mdiMail, mdiUpload } from '@md
 import { Field, Form, Formik } from 'formik'
 import Head from 'next/head'
 import { ReactElement } from 'react'
-import BaseButton from '../components/BaseButton'
-import BaseButtons from '../components/BaseButtons'
-import BaseDivider from '../components/BaseDivider'
+import Button from '../components/Button'
+import Buttons from '../components/Buttons'
+import Divider from '../components/Divider'
 import CardBox from '../components/CardBox'
-import FormCheckRadio from '../components/FormCheckRadio'
-import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
-import FormField from '../components/FormField'
-import FormFilePicker from '../components/FormFilePicker'
+import FormCheckRadio from '../components/Form/CheckRadio'
+import FormCheckRadioGroup from '../components/Form/CheckRadioGroup'
+import FormField from '../components/Form/Field'
+import FormFilePicker from '../components/Form/FilePicker'
 import LayoutAuthenticated from '../layouts/Authenticated'
-import SectionMain from '../components/SectionMain'
-import SectionTitle from '../components/SectionTitle'
-import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
+import SectionMain from '../components/Section/Main'
+import SectionTitle from '../components/Section/Title'
+import SectionTitleLineWithButton from '../components/Section/TitleLineWithButton'
 import { getPageTitle } from '../config'
 
 const FormsPage = () => {
@@ -25,7 +25,7 @@ const FormsPage = () => {
 
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiBallotOutline} title="Formik forms example" main>
-          <BaseButton
+          <Button
             href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
             icon={mdiGithub}
@@ -69,18 +69,18 @@ const FormsPage = () => {
                 </Field>
               </FormField>
 
-              <BaseDivider />
+              <Divider />
 
               <FormField label="Textarea" hasTextareaHeight>
                 <Field name="textarea" as="textarea" placeholder="Your text here" />
               </FormField>
 
-              <BaseDivider />
+              <Divider />
 
-              <BaseButtons>
-                <BaseButton type="submit" color="info" label="Submit" />
-                <BaseButton type="reset" color="info" outline label="Reset" />
-              </BaseButtons>
+              <Buttons>
+                <Button type="submit" color="info" label="Submit" />
+                <Button type="reset" color="info" outline label="Reset" />
+              </Buttons>
             </Form>
           </Formik>
         </CardBox>
@@ -109,7 +109,7 @@ const FormsPage = () => {
                 </FormCheckRadioGroup>
               </FormField>
 
-              <BaseDivider />
+              <Divider />
 
               <FormField label="Radio">
                 <FormCheckRadioGroup>
@@ -122,7 +122,7 @@ const FormsPage = () => {
                 </FormCheckRadioGroup>
               </FormField>
 
-              <BaseDivider />
+              <Divider />
 
               <FormField label="Switch">
                 <FormCheckRadioGroup>
@@ -136,7 +136,7 @@ const FormsPage = () => {
               </FormField>
             </Form>
           </Formik>
-          <BaseDivider />
+          <Divider />
           <FormField>
             <FormFilePicker label="Upload" color="info" icon={mdiUpload} />
           </FormField>

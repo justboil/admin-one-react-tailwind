@@ -1,14 +1,14 @@
 import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from '@mdi/js'
 import Head from 'next/head'
 import React, { ReactElement } from 'react'
-import BaseButton from '../components/BaseButton'
+import Button from '../components/Button'
 import CardBox from '../components/CardBox'
-import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
+import CardBoxComponentEmpty from '../components/CardBox/Component/Empty'
 import LayoutAuthenticated from '../layouts/Authenticated'
 import NotificationBar from '../components/NotificationBar'
-import SectionMain from '../components/SectionMain'
-import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
-import TableSampleClients from '../components/TableSampleClients'
+import SectionMain from '../components/Section/Main'
+import SectionTitleLineWithButton from '../components/Section/TitleLineWithButton'
+import TableSampleClients from '../components/Table/SampleClients'
 import { getPageTitle } from '../config'
 
 const TablesPage = () => {
@@ -19,7 +19,7 @@ const TablesPage = () => {
       </Head>
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiTableBorder} title="Tables" main>
-          <BaseButton
+          <Button
             href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
             icon={mdiGithub}

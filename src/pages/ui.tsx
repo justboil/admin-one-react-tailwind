@@ -13,21 +13,21 @@ import { Field, Formik } from 'formik'
 import Head from 'next/head'
 import { useState } from 'react'
 import type { ReactElement } from 'react'
-import BaseButton from '../components/BaseButton'
-import BaseButtons from '../components/BaseButtons'
-import BaseDivider from '../components/BaseDivider'
+import Button from '../components/Button'
+import Buttons from '../components/Buttons'
+import Divider from '../components/Divider'
 import CardBox from '../components/CardBox'
-import CardBoxComponentEmpty from '../components/CardBoxComponentEmpty'
-import CardBoxComponentTitle from '../components/CardBoxComponentTitle'
-import CardBoxModal from '../components/CardBoxModal'
-import FormCheckRadio from '../components/FormCheckRadio'
-import FormCheckRadioGroup from '../components/FormCheckRadioGroup'
+import CardBoxComponentEmpty from '../components/CardBox/Component/Empty'
+import CardBoxComponentTitle from '../components/CardBox/Component/Title'
+import CardBoxModal from '../components/CardBox/Modal'
+import FormCheckRadio from '../components/Form/CheckRadio'
+import FormCheckRadioGroup from '../components/Form/CheckRadioGroup'
 import LayoutAuthenticated from '../layouts/Authenticated'
 import NotificationBar from '../components/NotificationBar'
 import PillTag from '../components/PillTag'
-import SectionMain from '../components/SectionMain'
-import SectionTitle from '../components/SectionTitle'
-import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
+import SectionMain from '../components/Section/Main'
+import SectionTitle from '../components/Section/Title'
+import SectionTitleLineWithButton from '../components/Section/TitleLineWithButton'
 import { useAppDispatch } from '../stores/hooks'
 import { setDarkMode } from '../stores/styleSlice'
 import { getPageTitle } from '../config'
@@ -36,10 +36,10 @@ const UiPage = () => {
   const dispatch = useAppDispatch()
 
   const CardSamplesFooter = (
-    <BaseButtons>
-      <BaseButton label="Confirm" color="info" />
-      <BaseButton label="Cancel" color="info" outline />
-    </BaseButtons>
+    <Buttons>
+      <Button label="Confirm" color="info" />
+      <Button label="Cancel" color="info" outline />
+    </Buttons>
   )
 
   const modalSampleCardClassName = 'cursor-pointer md:w-7/12 lg:w-5/12 shadow-2xl md:mx-auto'
@@ -54,22 +54,22 @@ const UiPage = () => {
   )
 
   const modalFooterInfo = (
-    <BaseButtons>
-      <BaseButton label="Confirm" color="info" />
-      <BaseButton label="Cancel" color="info" outline />
-    </BaseButtons>
+    <Buttons>
+      <Button label="Confirm" color="info" />
+      <Button label="Cancel" color="info" outline />
+    </Buttons>
   )
 
   const modalFooterDanger = (
-    <BaseButtons>
-      <BaseButton label="Done" color="danger" />
-    </BaseButtons>
+    <Buttons>
+      <Button label="Done" color="danger" />
+    </Buttons>
   )
 
   const modalFooterSuccess = (
-    <BaseButtons>
-      <BaseButton label="Done" color="success" />
-    </BaseButtons>
+    <Buttons>
+      <Button label="Done" color="success" />
+    </Buttons>
   )
 
   const handleModalAction = () => {
@@ -93,11 +93,7 @@ const UiPage = () => {
       <SectionMain>
         <CardBox className="md:w-7/12 lg:w-5/12 xl:w-4/12 shadow-2xl md:mx-auto">
           <div className="text-center py-24 lg:py-12 text-gray-500 dark:text-slate-400">
-            <BaseButton
-              label="Toggle"
-              color="contrast"
-              onClick={() => dispatch(setDarkMode(null))}
-            />
+            <Button label="Toggle" color="contrast" onClick={() => dispatch(setDarkMode(null))} />
           </div>
         </CardBox>
       </SectionMain>
@@ -144,7 +140,7 @@ const UiPage = () => {
             isHoverable
           >
             <CardBoxComponentTitle title="Please confirm action">
-              <BaseButton icon={mdiClose} color="whiteDark" small roundedFull />
+              <Button icon={mdiClose} color="whiteDark" small roundedFull />
             </CardBoxComponentTitle>
             <div className="space-y-3">
               <p>Click to see in action</p>
@@ -196,7 +192,7 @@ const UiPage = () => {
                 color="info"
                 icon={mdiInformation}
                 button={
-                  <BaseButton
+                  <Button
                     color={values.outline ? 'info' : 'white'}
                     label="Button"
                     roundedFull
@@ -213,7 +209,7 @@ const UiPage = () => {
                 color="success"
                 icon={mdiCheckCircle}
                 button={
-                  <BaseButton
+                  <Button
                     color={values.outline ? 'success' : 'white'}
                     label="Button"
                     roundedFull
@@ -230,7 +226,7 @@ const UiPage = () => {
                 color="warning"
                 icon={mdiAlert}
                 button={
-                  <BaseButton
+                  <Button
                     color={values.outline ? 'warning' : 'white'}
                     label="Button"
                     roundedFull
@@ -247,7 +243,7 @@ const UiPage = () => {
                 color="danger"
                 icon={mdiAlertCircle}
                 button={
-                  <BaseButton
+                  <Button
                     color={values.outline ? 'danger' : 'white'}
                     label="Button"
                     roundedFull
@@ -293,10 +289,10 @@ const UiPage = () => {
                   </FormCheckRadio>
                 </FormCheckRadioGroup>
 
-                <BaseDivider />
+                <Divider />
 
-                <BaseButtons>
-                  <BaseButton
+                <Buttons>
+                  <Button
                     color="lightDark"
                     label="Button"
                     outline={values.outline}
@@ -304,7 +300,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="contrast"
                     label="Button"
                     outline={values.outline}
@@ -312,7 +308,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="info"
                     label="Button"
                     outline={values.outline}
@@ -320,7 +316,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="success"
                     label="Button"
                     outline={values.outline}
@@ -328,7 +324,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="warning"
                     label="Button"
                     outline={values.outline}
@@ -336,7 +332,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="danger"
                     label="Button"
                     outline={values.outline}
@@ -344,12 +340,12 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                </BaseButtons>
+                </Buttons>
 
-                <BaseDivider />
+                <Divider />
 
-                <BaseButtons>
-                  <BaseButton
+                <Buttons>
+                  <Button
                     color="lightDark"
                     label="Button"
                     icon={mdiOpenInNew}
@@ -358,7 +354,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="contrast"
                     label="Button"
                     icon={mdiOpenInNew}
@@ -367,7 +363,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="info"
                     label="Button"
                     icon={mdiOpenInNew}
@@ -376,7 +372,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="success"
                     label="Button"
                     icon={mdiOpenInNew}
@@ -385,7 +381,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="warning"
                     label="Button"
                     icon={mdiOpenInNew}
@@ -394,7 +390,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="danger"
                     label="Button"
                     icon={mdiOpenInNew}
@@ -403,12 +399,12 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                </BaseButtons>
+                </Buttons>
 
-                <BaseDivider />
+                <Divider />
 
-                <BaseButtons>
-                  <BaseButton
+                <Buttons>
+                  <Button
                     color="lightDark"
                     icon={mdiOpenInNew}
                     outline={values.outline}
@@ -416,7 +412,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="contrast"
                     icon={mdiOpenInNew}
                     outline={values.outline}
@@ -424,7 +420,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="info"
                     icon={mdiOpenInNew}
                     outline={values.outline}
@@ -432,7 +428,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="success"
                     icon={mdiOpenInNew}
                     outline={values.outline}
@@ -440,7 +436,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="warning"
                     icon={mdiOpenInNew}
                     outline={values.outline}
@@ -448,7 +444,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                  <BaseButton
+                  <Button
                     color="danger"
                     icon={mdiOpenInNew}
                     outline={values.outline}
@@ -456,7 +452,7 @@ const UiPage = () => {
                     roundedFull={values.rounded}
                     disabled={values.disabled}
                   />
-                </BaseButtons>
+                </Buttons>
               </>
             )}
           </Formik>
@@ -484,8 +480,8 @@ const UiPage = () => {
                     <Field type="checkbox" name="icon" />
                   </FormCheckRadio>
                 </FormCheckRadioGroup>
-                <BaseDivider />
-                <BaseButtons>
+                <Divider />
+                <Buttons>
                   <PillTag
                     color="contrast"
                     label="Contrast"
@@ -521,7 +517,7 @@ const UiPage = () => {
                     outline={values.outline}
                     small={values.small}
                   />
-                </BaseButtons>
+                </Buttons>
               </>
             )}
           </Formik>
@@ -534,7 +530,7 @@ const UiPage = () => {
         <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-2">
           <CardBox footer={CardSamplesFooter}>
             <CardBoxComponentTitle title="With title & icon">
-              <BaseButton icon={mdiReload} color="whiteDark" roundedFull />
+              <Button icon={mdiReload} color="whiteDark" roundedFull />
             </CardBoxComponentTitle>
             <div className="space-y-3">
               <p>Card with title, icon & footer</p>

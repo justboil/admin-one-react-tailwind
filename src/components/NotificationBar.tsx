@@ -2,8 +2,8 @@ import { mdiClose } from '@mdi/js'
 import React, { ReactNode, useState } from 'react'
 import { ColorKey } from '../interfaces'
 import { colorsBgLight, colorsOutline } from '../colors'
-import BaseButton from './BaseButton'
-import BaseIcon from './BaseIcon'
+import Button from './Button'
+import Icon from './Icon'
 
 type Props = {
   color: ColorKey
@@ -35,19 +35,13 @@ const NotificationBar = ({ outline = false, children, ...props }: Props) => {
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="flex flex-col md:flex-row items-center mb-6 md:mb-0">
           {props.icon && (
-            <BaseIcon
-              path={props.icon}
-              w="w-10 md:w-5"
-              h="h-10 md:h-5"
-              size="24"
-              className="md:mr-2"
-            />
+            <Icon path={props.icon} w="w-10 md:w-5" h="h-10 md:h-5" size="24" className="md:mr-2" />
           )}
           <span className="text-center md:text-left md:py-2">{children}</span>
         </div>
         {props.button}
         {!props.button && (
-          <BaseButton icon={mdiClose} color="white" onClick={dismiss} small roundedFull />
+          <Button icon={mdiClose} color="white" onClick={dismiss} small roundedFull />
         )}
       </div>
     </div>

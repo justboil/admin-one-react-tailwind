@@ -3,14 +3,14 @@ import { useState } from 'react'
 import { mdiForwardburger, mdiBackburger, mdiMenu } from '@mdi/js'
 import menuAside from '../menuAside'
 import menuNavBar from '../menuNavBar'
-import BaseIcon from '../components/BaseIcon'
+import Icon from '../components/Icon'
 import NavBar from '../components/NavBar'
-import NavBarItemPlain from '../components/NavBarItemPlain'
+import NavBarItemPlain from '../components/NavBar/Item/Plain'
 import AsideMenu from '../components/AsideMenu'
 import FooterBar from '../components/FooterBar'
 import { setUser } from '../stores/mainSlice'
 import { useAppDispatch, useAppSelector } from '../stores/hooks'
-import FormField from '../components/FormField'
+import FormField from '../components/Form/Field'
 import { Field, Form, Formik } from 'formik'
 import { useRouter } from 'next/router'
 
@@ -71,13 +71,13 @@ export default function LayoutAuthenticated({ children }: Props) {
             display="flex lg:hidden"
             onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
           >
-            <BaseIcon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
+            <Icon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
           </NavBarItemPlain>
           <NavBarItemPlain
             display="hidden lg:flex xl:hidden"
             onClick={() => setIsAsideLgActive(true)}
           >
-            <BaseIcon path={mdiMenu} size="24" />
+            <Icon path={mdiMenu} size="24" />
           </NavBarItemPlain>
           <NavBarItemPlain useMargin>
             <Formik

@@ -9,18 +9,18 @@ import {
 import { Formik, Form, Field } from 'formik'
 import Head from 'next/head'
 import type { ReactElement } from 'react'
-import BaseButton from '../components/BaseButton'
-import BaseButtons from '../components/BaseButtons'
-import BaseDivider from '../components/BaseDivider'
+import Button from '../components/Button'
+import Buttons from '../components/Buttons'
+import Divider from '../components/Divider'
 import CardBox from '../components/CardBox'
-import CardBoxComponentBody from '../components/CardBoxComponentBody'
-import CardBoxComponentFooter from '../components/CardBoxComponentFooter'
-import FormField from '../components/FormField'
-import FormFilePicker from '../components/FormFilePicker'
+import CardBoxComponentBody from '../components/CardBox/Component/Body'
+import CardBoxComponentFooter from '../components/CardBox/Component/Footer'
+import FormField from '../components/Form/Field'
+import FormFilePicker from '../components/Form/FilePicker'
 import LayoutAuthenticated from '../layouts/Authenticated'
-import SectionMain from '../components/SectionMain'
-import SectionTitleLineWithButton from '../components/SectionTitleLineWithButton'
-import UserCard from '../components/UserCard'
+import SectionMain from '../components/Section/Main'
+import SectionTitleLineWithButton from '../components/Section/TitleLineWithButton'
+import CardBoxUser from '../components/CardBox/User'
 import type { UserForm } from '../interfaces'
 import { getPageTitle } from '../config'
 import { useAppSelector } from '../stores/hooks'
@@ -42,7 +42,7 @@ const ProfilePage = () => {
 
       <SectionMain>
         <SectionTitleLineWithButton icon={mdiAccount} title="Profile" main>
-          <BaseButton
+          <Button
             href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
             icon={mdiGithub}
@@ -53,7 +53,7 @@ const ProfilePage = () => {
           />
         </SectionTitleLineWithButton>
 
-        <UserCard className="mb-6" />
+        <CardBoxUser className="mb-6" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="flex flex-col">
@@ -88,10 +88,10 @@ const ProfilePage = () => {
                     </FormField>
                   </CardBoxComponentBody>
                   <CardBoxComponentFooter>
-                    <BaseButtons>
-                      <BaseButton color="info" type="submit" label="Submit" />
-                      <BaseButton color="info" label="Options" outline />
-                    </BaseButtons>
+                    <Buttons>
+                      <Button color="info" type="submit" label="Submit" />
+                      <Button color="info" label="Options" outline />
+                    </Buttons>
                   </CardBoxComponentFooter>
                 </Form>
               </Formik>
@@ -123,7 +123,7 @@ const ProfilePage = () => {
                     />
                   </FormField>
 
-                  <BaseDivider />
+                  <Divider />
 
                   <FormField
                     label="New password"
@@ -155,10 +155,10 @@ const ProfilePage = () => {
                 </CardBoxComponentBody>
 
                 <CardBoxComponentFooter>
-                  <BaseButtons>
-                    <BaseButton color="info" type="submit" label="Submit" />
-                    <BaseButton color="info" label="Options" outline />
-                  </BaseButtons>
+                  <Buttons>
+                    <Button color="info" type="submit" label="Submit" />
+                    <Button color="info" label="Options" outline />
+                  </Buttons>
                 </CardBoxComponentFooter>
               </Form>
             </Formik>
