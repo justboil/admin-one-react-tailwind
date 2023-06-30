@@ -6,7 +6,7 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier '{components,pages,src,interfaces,hooks}/**/*.{tsx,ts,js}' --write"
+    "format": "prettier 'src/**/*.{tsx,ts,js}' --write"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
