@@ -21,7 +21,7 @@ export default function AsideMenuLayer({ menu, className = '', ...props }: Props
   const logoutItem: MenuAsideItem = {
     label: 'Logout',
     icon: mdiLogout,
-    color: 'info',
+    color: 'success',
     isLogout: true,
   }
 
