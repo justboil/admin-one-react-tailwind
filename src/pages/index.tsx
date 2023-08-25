@@ -11,7 +11,7 @@ import { appTitle } from '../config'
 import { useAppDispatch } from '../stores/hooks'
 import { setDarkMode, setStyle } from '../stores/styleSlice'
 
-const StyleSelect = () => {
+const StyleSelectPage = () => {
   const dispatch = useAppDispatch()
 
   dispatch(setDarkMode(false))
@@ -69,8 +69,8 @@ const StyleSelect = () => {
   )
 }
 
-StyleSelect.getLayout = function getLayout(page: ReactElement) {
+StyleSelectPage.getLayout = function getLayout(page: ReactElement) {
   return <LayoutGuest>{page}</LayoutGuest>
 }
 
-export default StyleSelect
+export default StyleSelectPage

@@ -7,7 +7,7 @@ import SectionFullScreen from '../components/Section/FullScreen'
 import LayoutGuest from '../layouts/Guest'
 import { getPageTitle } from '../config'
 
-export default function Error() {
+const ErrorPage = () => {
   return (
     <>
       <Head>
@@ -30,6 +30,8 @@ export default function Error() {
   )
 }
 
-Error.getLayout = function getLayout(page: ReactElement) {
+ErrorPage.getLayout = function getLayout(page: ReactElement) {
   return <LayoutGuest>{page}</LayoutGuest>
 }
+
+export default ErrorPage

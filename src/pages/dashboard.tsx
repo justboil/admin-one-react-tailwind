@@ -27,7 +27,7 @@ import NotificationBar from '../components/NotificationBar'
 import TableSampleClients from '../components/Table/SampleClients'
 import { getPageTitle } from '../config'
 
-const Dashboard = () => {
+const DashboardPage = () => {
   const { clients } = useSampleClients()
   const { transactions } = useSampleTransactions()
 
@@ -128,8 +128,8 @@ const Dashboard = () => {
   )
 }
 
-Dashboard.getLayout = function getLayout(page: ReactElement) {
+DashboardPage.getLayout = function getLayout(page: ReactElement) {
   return <LayoutAuthenticated>{page}</LayoutAuthenticated>
 }
 
-export default Dashboard
+export default DashboardPage

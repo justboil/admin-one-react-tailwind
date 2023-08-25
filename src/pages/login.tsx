@@ -13,7 +13,7 @@ import Buttons from '../components/Buttons'
 import { useRouter } from 'next/router'
 import { getPageTitle } from '../config'
 
-export default function Error() {
+const LoginPage = () => {
   const router = useRouter()
 
   const handleSubmit = () => {
@@ -59,6 +59,8 @@ export default function Error() {
   )
 }
 
-Error.getLayout = function getLayout(page: ReactElement) {
+LoginPage.getLayout = function getLayout(page: ReactElement) {
   return <LayoutGuest>{page}</LayoutGuest>
 }
+
+export default LoginPage
