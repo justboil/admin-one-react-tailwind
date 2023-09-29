@@ -17,12 +17,6 @@ type Props = {
 export default function NavBarItem({ item }: Props) {
   const dispatch = useAppDispatch()
 
-  const navBarItemLabelActiveColorStyle = useAppSelector(
-    (state) => state.style.navBarItemLabelActiveColorStyle
-  )
-  const navBarItemLabelStyle = useAppSelector((state) => state.style.navBarItemLabelStyle)
-  const navBarItemLabelHoverStyle = useAppSelector((state) => state.style.navBarItemLabelHoverStyle)
-
   const userName = useAppSelector((state) => state.main.userName)
 
   const [isDropdownActive, setIsDropdownActive] = useState(false)
@@ -30,8 +24,8 @@ export default function NavBarItem({ item }: Props) {
   const componentClass = [
     'block lg:flex items-center relative cursor-pointer',
     isDropdownActive
-      ? `${navBarItemLabelActiveColorStyle} dark:text-slate-400`
-      : `${navBarItemLabelStyle} dark:text-white dark:hover:text-slate-400 ${navBarItemLabelHoverStyle}`,
+      ? `navbar-item-label-active dark:text-slate-400`
+      : `navbar-item-label dark:text-white dark:hover:text-slate-400`,
     item.menu ? 'lg:py-2 lg:px-3' : 'py-2 px-3',
     item.isDesktopNoLabel ? 'lg:w-16 lg:justify-center' : '',
   ].join(' ')

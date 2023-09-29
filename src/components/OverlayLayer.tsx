@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import { useAppSelector } from '../stores/hooks'
 
 type Props = {
   zIndex?: string
@@ -16,8 +15,6 @@ export default function OverlayLayer({
   className,
   ...props
 }: Props) {
-  const overlayStyle = useAppSelector((state) => state.style.overlayStyle)
-
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault()
 
@@ -31,7 +28,7 @@ export default function OverlayLayer({
       className={`${type} ${zIndex} ${className} items-center flex-col justify-center overflow-hidden fixed inset-0`}
     >
       <div
-        className={`${overlayStyle} absolute inset-0 bg-gradient-to-tr opacity-90 dark:from-gray-700 dark:via-gray-900 dark:to-gray-700`}
+        className={`overlay absolute inset-0 bg-gradient-to-tr opacity-90 dark:from-gray-700 dark:via-gray-900 dark:to-gray-700`}
         onClick={handleClick}
       ></div>
 

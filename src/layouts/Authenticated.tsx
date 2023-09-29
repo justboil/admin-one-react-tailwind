@@ -9,7 +9,7 @@ import NavBarItemPlain from '../components/NavBar/Item/Plain'
 import AsideMenu from '../components/AsideMenu'
 import FooterBar from '../components/FooterBar'
 import { setUser } from '../stores/mainSlice'
-import { useAppDispatch, useAppSelector } from '../stores/hooks'
+import { useAppDispatch } from '../stores/hooks'
 import FormField from '../components/Form/Field'
 import { Field, Form, Formik } from 'formik'
 import { useRouter } from 'next/router'
@@ -31,8 +31,6 @@ export default function LayoutAuthenticated({ children }: Props) {
       })
     )
   })
-
-  const darkMode = useAppSelector((state) => state.style.darkMode)
 
   const [isAsideMobileExpanded, setIsAsideMobileExpanded] = useState(false)
   const [isAsideLgActive, setIsAsideLgActive] = useState(false)
@@ -57,7 +55,7 @@ export default function LayoutAuthenticated({ children }: Props) {
   const layoutAsidePadding = 'xl:pl-60'
 
   return (
-    <div className={`${darkMode ? 'dark' : ''} overflow-hidden lg:overflow-visible`}>
+    <div className={`overflow-hidden lg:overflow-visible`}>
       <div
         className={`${layoutAsidePadding} ${
           isAsideMobileExpanded ? 'ml-60 lg:ml-0' : ''

@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { getButtonColor } from '../../colors'
 import AsideMenuList from './List'
 import { MenuAsideItem } from '../../interfaces'
-import { useAppSelector } from '../../stores/hooks'
 import { useRouter } from 'next/router'
 
 type Props = {
@@ -17,11 +16,7 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
   const [isLinkActive, setIsLinkActive] = useState(false)
   const [isDropdownActive, setIsDropdownActive] = useState(false)
 
-  const asideMenuItemStyle = useAppSelector((state) => state.style.asideMenuItemStyle)
-  const asideMenuDropdownStyle = useAppSelector((state) => state.style.asideMenuDropdownStyle)
-  const asideMenuItemActiveStyle = useAppSelector((state) => state.style.asideMenuItemActiveStyle)
-
-  const activeClassAddon = !item.color && isLinkActive ? asideMenuItemActiveStyle : ''
+  const activeClassAddon = !item.color && isLinkActive ? 'aside-menu-item-active font-bold' : ''
 
   const { asPath, isReady } = useRouter()
 
@@ -62,7 +57,7 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
     isDropdownList ? 'py-3 px-6 text-sm' : 'py-3',
     item.color
       ? getButtonColor(item.color, false, true)
-      : `${asideMenuItemStyle} dark:text-slate-300 dark:hover:text-white`,
+      : `aside-menu-item dark:text-slate-300 dark:hover:text-white`,
   ].join(' ')
 
   return (
@@ -80,7 +75,7 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
       {item.menu && (
         <AsideMenuList
           menu={item.menu}
-          className={`${asideMenuDropdownStyle} ${
+          className={`aside-menu-dropdown ${
             isDropdownActive ? 'block dark:bg-slate-800/50' : 'hidden'
           }`}
           isDropdownList
