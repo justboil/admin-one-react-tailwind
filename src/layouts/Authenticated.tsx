@@ -8,8 +8,6 @@ import NavBar from '../components/NavBar'
 import NavBarItemPlain from '../components/NavBar/Item/Plain'
 import AsideMenu from '../components/AsideMenu'
 import FooterBar from '../components/FooterBar'
-import { setUser } from '../stores/mainSlice'
-import { useAppDispatch } from '../stores/hooks'
 import FormField from '../components/Form/Field'
 import { Field, Form, Formik } from 'formik'
 import { useRouter } from 'next/router'
@@ -19,19 +17,6 @@ type Props = {
 }
 
 export default function LayoutAuthenticated({ children }: Props) {
-  const dispatch = useAppDispatch()
-
-  useEffect(() => {
-    dispatch(
-      setUser({
-        name: 'John Doe',
-        email: 'john@example.com',
-        avatar:
-          'https://avatars.dicebear.com/api/avataaars/example.svg?options[top][]=shortHair&options[accessoriesChance]=93',
-      })
-    )
-  })
-
   const [isAsideMobileExpanded, setIsAsideMobileExpanded] = useState(false)
   const [isAsideLgActive, setIsAsideLgActive] = useState(false)
 
@@ -50,7 +35,7 @@ export default function LayoutAuthenticated({ children }: Props) {
     return () => {
       router.events.off('routeChangeStart', handleRouteChangeStart)
     }
-  }, [router.events, dispatch])
+  }, [router.events])
 
   const layoutAsidePadding = 'xl:pl-60'
 

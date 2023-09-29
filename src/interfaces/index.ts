@@ -1,7 +1,6 @@
 export type UserPayloadObject = {
   name: string
   email: string
-  avatar: string
 }
 
 export type MenuAsideItem = {
