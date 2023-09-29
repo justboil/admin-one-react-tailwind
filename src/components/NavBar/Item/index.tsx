@@ -8,7 +8,7 @@ import UserAvatarCurrentUser from '../../UserAvatar/CurrentUser'
 import NavBarMenuList from '../MenuList'
 import { useAppDispatch, useAppSelector } from '../../../stores/hooks'
 import { MenuNavBarItem } from '../../../interfaces'
-import { setDarkMode } from '../../../stores/styleSlice'
+import { setDarkMode } from '../../../stores/darkModeSlice'
 
 type Props = {
   item: MenuNavBarItem

@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default function SectionFullScreen({ bg, children }: Props) {
-  const darkMode = useAppSelector((state) => state.style.darkMode)
+  const darkMode = useAppSelector((state) => state.darkMode.isEnabled)
 
   let componentClass = 'flex min-h-screen items-center justify-center '
 

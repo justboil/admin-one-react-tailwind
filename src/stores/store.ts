@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import styleReducer from './styleSlice'
+import darkModeReducer from './darkModeSlice'
 import mainReducer from './mainSlice'
 
 export const store = configureStore({
   reducer: {
-    style: styleReducer,
+    darkMode: darkModeReducer,
     main: mainReducer,
   },
 })

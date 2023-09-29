@@ -8,7 +8,7 @@ import SectionMain from '../components/Section/Main'
 import { gradientBgPurplePink } from '../colors'
 import { appTitle } from '../config'
 import { useAppDispatch } from '../stores/hooks'
-import { setDarkMode } from '../stores/styleSlice'
+import { setDarkMode } from '../stores/darkModeSlice'
 
 const StyleSelectPage = () => {
   const dispatch = useAppDispatch()
@@ -19,7 +19,7 @@ const StyleSelectPage = () => {
 
   const router = useRouter()
 
-  const handleStylePick = (e: React.MouseEvent, style:string) => {
+  const handleStylePick = (e: React.MouseEvent, style: string) => {
     e.preventDefault()
 
     document.documentElement.classList.forEach((token) => {

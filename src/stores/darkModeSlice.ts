@@ -1,24 +1,24 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-interface StyleState {
-  darkMode: boolean
+interface DarkModeState {
+  isEnabled: boolean
 }
 
-const initialState: StyleState = {
-  darkMode: false,
+const initialState: DarkModeState = {
+  isEnabled: false,
 }
 
 export const styleSlice = createSlice({
-  name: 'style',
+  name: 'darkMode',
   initialState,
   reducers: {
     setDarkMode: (state, action: PayloadAction<boolean | null>) => {
-      state.darkMode = action.payload !== null ? action.payload : !state.darkMode
+      state.isEnabled = action.payload !== null ? action.payload : !state.isEnabled
 
       if (typeof document !== 'undefined') {
-        document.body.classList[state.darkMode ? 'add' : 'remove']('dark-scrollbars')
+        document.body.classList[state.isEnabled ? 'add' : 'remove']('dark-scrollbars')
 
-        document.documentElement.classList[state.darkMode ? 'add' : 'remove'](
+        document.documentElement.classList[state.isEnabled ? 'add' : 'remove'](
           'dark',
           'dark-scrollbars-compat'
         )

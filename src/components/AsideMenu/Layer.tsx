@@ -13,7 +13,7 @@ type Props = {
 }
 
 export default function AsideMenuLayer({ menu, className = '', ...props }: Props) {
-  const darkMode = useAppSelector((state) => state.style.darkMode)
+  const darkMode = useAppSelector((state) => state.darkMode.isEnabled)
 
   const logoutItem: MenuAsideItem = {
     label: 'Logout',
