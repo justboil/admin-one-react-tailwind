@@ -78,8 +78,8 @@ const FormsPage = () => {
               <Divider />
 
               <Buttons>
-                <Button type="submit" color="info" label="Submit" />
-                <Button type="reset" color="info" outline label="Reset" />
+                <Button type="submit" color="info" label="Submit" isGrouped />
+                <Button type="reset" color="info" outline label="Reset" isGrouped />
               </Buttons>
             </Form>
           </Formik>

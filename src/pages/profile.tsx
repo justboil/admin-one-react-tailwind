@@ -89,8 +89,8 @@ const ProfilePage = () => {
                   </CardBoxComponentBody>
                   <CardBoxComponentFooter>
                     <Buttons>
-                      <Button color="info" type="submit" label="Submit" />
-                      <Button color="info" label="Options" outline />
+                      <Button color="info" type="submit" label="Submit" isGrouped />
+                      <Button color="info" label="Options" outline isGrouped />
                     </Buttons>
                   </CardBoxComponentFooter>
                 </Form>
@@ -156,8 +156,8 @@ const ProfilePage = () => {
 
                 <CardBoxComponentFooter>
                   <Buttons>
-                    <Button color="info" type="submit" label="Submit" />
-                    <Button color="info" label="Options" outline />
+                    <Button color="info" type="submit" label="Submit" isGrouped />
+                    <Button color="info" label="Options" outline isGrouped />
                   </Buttons>
                 </CardBoxComponentFooter>
               </Form>

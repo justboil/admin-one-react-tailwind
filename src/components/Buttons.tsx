@@ -1,4 +1,3 @@
-import { Children, cloneElement, ReactElement } from 'react'
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -13,7 +12,6 @@ type Props = {
 const Buttons = ({
   type = 'justify-start',
   mb = '-mb-3',
-  classAddon = 'mr-3 last:mr-0 mb-3',
   noWrap = false,
   children,
   className,
@@ -24,9 +22,7 @@ const Buttons = ({
         noWrap ? 'flex-nowrap' : 'flex-wrap'
       }`}
     >
-      {Children.map(children, (child: ReactElement) =>
-        child ? cloneElement(child, { className: `${classAddon} ${child.props.className}` }) : null
-      )}
+      {children}
     </div>
   )
 }

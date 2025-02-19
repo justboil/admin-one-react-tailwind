@@ -19,6 +19,7 @@ type Props = {
   active?: boolean
   disabled?: boolean
   roundedFull?: boolean
+  isGrouped?: boolean
   onClick?: (e: React.MouseEvent) => void
 }
 
@@ -38,6 +39,7 @@ export default function Button({
   disabled = false,
   roundedFull = false,
   onClick,
+  ...props
 }: Props) {
   const componentClass = [
     'inline-flex',
@@ -54,6 +56,10 @@ export default function Button({
     getButtonColor(color, outline, !disabled, active),
     className,
   ]
+
+  if (props.isGrouped) {
+    componentClass.push('mr-3 last:mr-0 mb-3')
+  }
 
   if (!label && icon) {
     componentClass.push('p-1')

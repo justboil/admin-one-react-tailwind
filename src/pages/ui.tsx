@@ -37,8 +37,8 @@ const UiPage = () => {
 
   const CardSamplesFooter = (
     <Buttons>
-      <Button label="Confirm" color="info" />
-      <Button label="Cancel" color="info" outline />
+      <Button label="Confirm" color="info" isGrouped />
+      <Button label="Cancel" color="info" outline isGrouped />
     </Buttons>
   )
 
@@ -55,20 +55,20 @@ const UiPage = () => {
 
   const modalFooterInfo = (
     <Buttons>
-      <Button label="Confirm" color="info" />
-      <Button label="Cancel" color="info" outline />
+      <Button label="Confirm" color="info" isGrouped />
+      <Button label="Cancel" color="info" outline isGrouped />
     </Buttons>
   )
 
   const modalFooterDanger = (
     <Buttons>
-      <Button label="Done" color="danger" />
+      <Button label="Done" color="danger" isGrouped />
     </Buttons>
   )
 
   const modalFooterSuccess = (
     <Buttons>
-      <Button label="Done" color="success" />
+      <Button label="Done" color="success" isGrouped />
     </Buttons>
   )
 
@@ -299,6 +299,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="contrast"
@@ -307,6 +308,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="info"
@@ -315,6 +317,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="success"
@@ -323,6 +326,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="warning"
@@ -331,6 +335,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="danger"
@@ -339,6 +344,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                 </Buttons>
 
@@ -353,6 +359,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="contrast"
@@ -362,6 +369,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="info"
@@ -371,6 +379,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="success"
@@ -380,6 +389,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="warning"
@@ -389,6 +399,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="danger"
@@ -398,6 +409,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                 </Buttons>
 
@@ -411,6 +423,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="contrast"
@@ -419,6 +432,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="info"
@@ -427,6 +441,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="success"
@@ -435,6 +450,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="warning"
@@ -443,6 +459,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                   <Button
                     color="danger"
@@ -451,6 +468,7 @@ const UiPage = () => {
                     small={values.small}
                     roundedFull={values.rounded}
                     disabled={values.disabled}
+                    isGrouped
                   />
                 </Buttons>
               </>
@@ -488,6 +506,7 @@ const UiPage = () => {
                     icon={values.icon ? mdiTrendingUp : null}
                     outline={values.outline}
                     small={values.small}
+                    isGrouped
                   />
                   <PillTag
                     color="info"
@@ -495,6 +514,7 @@ const UiPage = () => {
                     icon={values.icon ? mdiTrendingUp : null}
                     outline={values.outline}
                     small={values.small}
+                    isGrouped
                   />
                   <PillTag
                     color="success"
@@ -502,6 +522,7 @@ const UiPage = () => {
                     icon={values.icon ? mdiTrendingUp : null}
                     outline={values.outline}
                     small={values.small}
+                    isGrouped
                   />
                   <PillTag
                     color="warning"
@@ -509,6 +530,7 @@ const UiPage = () => {
                     icon={values.icon ? mdiTrendingUp : null}
                     outline={values.outline}
                     small={values.small}
+                    isGrouped
                   />
                   <PillTag
                     color="danger"
@@ -516,6 +538,7 @@ const UiPage = () => {
                     icon={values.icon ? mdiTrendingUp : null}
                     outline={values.outline}
                     small={values.small}
+                    isGrouped
                   />
                 </Buttons>
               </>

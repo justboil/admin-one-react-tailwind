@@ -58,8 +58,8 @@ const LoginPage = () => {
               <Divider />
 
               <Buttons>
-                <Button type="submit" label="Login" color="info" />
-                <Button href="/dashboard" label="Home" color="info" outline />
+                <Button type="submit" label="Login" color="info" isGrouped />
+                <Button href="/dashboard" label="Home" color="info" outline isGrouped />
               </Buttons>
             </Form>
           </Formik>
