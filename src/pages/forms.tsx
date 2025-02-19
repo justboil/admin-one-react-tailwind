@@ -97,13 +97,13 @@ const FormsPage = () => {
             <Form>
               <FormField label="Checkbox">
                 <FormCheckRadioGroup>
-                  <FormCheckRadio type="checkbox" label="Lorem">
+                  <FormCheckRadio type="checkbox" label="Lorem" isGrouped>
                     <Field type="checkbox" name="checkboxes" value="lorem" />
                   </FormCheckRadio>
-                  <FormCheckRadio type="checkbox" label="Ipsum">
+                  <FormCheckRadio type="checkbox" label="Ipsum" isGrouped>
                     <Field type="checkbox" name="checkboxes" value="ipsum" />
                   </FormCheckRadio>
-                  <FormCheckRadio type="checkbox" label="Dolore">
+                  <FormCheckRadio type="checkbox" label="Dolore" isGrouped>
                     <Field type="checkbox" name="checkboxes" value="dolore" />
                   </FormCheckRadio>
                 </FormCheckRadioGroup>
@@ -113,10 +113,10 @@ const FormsPage = () => {
 
               <FormField label="Radio">
                 <FormCheckRadioGroup>
-                  <FormCheckRadio type="radio" label="Lorem">
+                  <FormCheckRadio type="radio" label="Lorem" isGrouped>
                     <Field type="radio" name="radio" value="lorem" />
                   </FormCheckRadio>
-                  <FormCheckRadio type="radio" label="Ipsum">
+                  <FormCheckRadio type="radio" label="Ipsum" isGrouped>
                     <Field type="radio" name="radio" value="ipsum" />
                   </FormCheckRadio>
                 </FormCheckRadioGroup>
@@ -126,10 +126,10 @@ const FormsPage = () => {
 
               <FormField label="Switch">
                 <FormCheckRadioGroup>
-                  <FormCheckRadio type="switch" label="Lorem">
+                  <FormCheckRadio type="switch" label="Lorem" isGrouped>
                     <Field type="checkbox" name="switches" value="lorem" />
                   </FormCheckRadio>
-                  <FormCheckRadio type="switch" label="Ipsum">
+                  <FormCheckRadio type="switch" label="Ipsum" isGrouped>
                     <Field type="checkbox" name="switches" value="ipsum" />
                   </FormCheckRadio>
                 </FormCheckRadioGroup>
