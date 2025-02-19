@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
-    "@reduxjs/toolkit": "^1.9.5",
+    "@reduxjs/toolkit": "^2.5.1",
     "chart.js": "^4.4.0",
     "formik": "^2.4.2",
-    "next": "^14.2.24",
+    "next": "15.1.7",
     "numeral": "^2.0.6",
-    "react": "^18.3.1",
+    "react": "19.0.0",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.3.1",
-    "react-redux": "^8.1.1",
+    "react-dom": "19.0.0",
+    "react-redux": "^9.2.0",
     "swr": "^2.2.0"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@typescript-eslint/parser": "^6.7.3",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.43.0",
-    "eslint-config-next": "^14.2.24",
+    "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "^9.0.0",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
