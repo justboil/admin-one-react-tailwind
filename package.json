@@ -3,7 +3,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier 'src/**/*.{tsx,ts,js}' --write"
@@ -13,11 +12,11 @@
     "@reduxjs/toolkit": "^1.9.5",
     "chart.js": "^4.4.0",
     "formik": "^2.4.2",
-    "next": "^13.4.7",
+    "next": "^14.2.24",
     "numeral": "^2.0.6",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-redux": "^8.1.1",
     "swr": "^2.2.0"
   },
@@ -30,7 +29,7 @@
     "@typescript-eslint/parser": "^6.7.3",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.43.0",
-    "eslint-config-next": "^13.4.7",
+    "eslint-config-next": "^14.2.24",
     "eslint-config-prettier": "^9.0.0",
     "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
