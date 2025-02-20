@@ -6,7 +6,7 @@ import PillTagPlain from './Plain'
 type Props = {
   label?: string
   color: ColorKey
-  icon?: string
+  icon?: string | null
   small?: boolean
   outline?: boolean
   className?: string

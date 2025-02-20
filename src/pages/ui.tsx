@@ -175,7 +175,7 @@ const UiPage = () => {
         </div>
       </SectionMain>
 
-      <Formik initialValues={{ outline: false }} onSubmit={() => null}>
+      <Formik initialValues={{ outline: false }} onSubmit={() => {}}>
         {({ values }) => (
           <>
             <SectionTitle custom>
@@ -270,7 +270,7 @@ const UiPage = () => {
         <CardBox>
           <Formik
             initialValues={{ outline: false, small: false, rounded: false, disabled: false }}
-            onSubmit={() => null}
+            onSubmit={() => {}}
           >
             {({ values }) => (
               <>
@@ -483,7 +483,7 @@ const UiPage = () => {
         <CardBox>
           <Formik
             initialValues={{ outline: false, small: false, icon: true }}
-            onSubmit={() => null}
+            onSubmit={() => {}}
           >
             {({ values }) => (
               <>

@@ -10,8 +10,11 @@ import SectionMain from '../components/Section/Main'
 import SectionTitleLineWithButton from '../components/Section/TitleLineWithButton'
 import TableSampleClients from '../components/Table/SampleClients'
 import { getPageTitle } from '../config'
+import { useSampleClients } from '../hooks/sampleData'
 
 const TablesPage = () => {
+  const { clients } = useSampleClients()
+
   return (
     <>
       <Head>
@@ -35,7 +38,7 @@ const TablesPage = () => {
         </NotificationBar>
 
         <CardBox className="mb-6" hasTable>
-          <TableSampleClients />
+          <TableSampleClients clients={clients} />
         </CardBox>
 
         <SectionTitleLineWithButton icon={mdiTableOff} title="Empty variation" />

@@ -15,7 +15,7 @@ const NumberDynamic = ({ prefix = '', suffix = '', value, duration = 500 }: Prop
 
   const stepDurationMs = 25
 
-  const timeoutIds = []
+  const timeoutIds: NodeJS.Timeout[] = []
 
   const grow = (growIncrement: number) => {
     const incrementedStep = Math.ceil(newValue + growIncrement)

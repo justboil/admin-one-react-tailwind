@@ -3,7 +3,7 @@ import Icon from '../Icon'
 
 type Props = {
   label?: string
-  icon?: string
+  icon?: string | null
   className?: string
   small?: boolean
 }

@@ -11,7 +11,7 @@ type Props = {
 }
 
 const FormFilePicker = ({ label, icon, accept, color, isRoundIcon }: Props) => {
-  const [file, setFile] = useState(null)
+  const [file, setFile] = useState<File | null>(null)
 
   const handleFileChange = (event) => {
     setFile(event.currentTarget.files[0])

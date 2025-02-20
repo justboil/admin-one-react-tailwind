@@ -1,28 +1,30 @@
+'use client'
+
 import { mdiEye, mdiTrashCan } from '@mdi/js'
 import React, { useState } from 'react'
-import { useSampleClients } from '../../hooks/sampleData'
 import { Client } from '../../interfaces'
 import Button from '../Button'
 import Buttons from '../Buttons'
 import CardBoxModal from '../CardBox/Modal'
 import UserAvatar from '../UserAvatar'
 
-const TableSampleClients = () => {
-  const { clients } = useSampleClients()
+type Props = {
+  clients: Client[]
+}
 
+const TableSampleClients = ({ clients }: Props) => {
   const perPage = 5
-
-  const [currentPage, setCurrentPage] = useState(0)
-
-  const clientsPaginated = clients.slice(perPage * currentPage, perPage * (currentPage + 1))
 
   const numPages = clients.length / perPage
 
-  const pagesList = []
+  const pagesList: number[] = []
 
   for (let i = 0; i < numPages; i++) {
     pagesList.push(i)
   }
+
+  const [currentPage, setCurrentPage] = useState(0)
+  const clientsPaginated = clients.slice(perPage * currentPage, perPage * (currentPage + 1))
 
   const [isModalInfoActive, setIsModalInfoActive] = useState(false)
   const [isModalTrashActive, setIsModalTrashActive] = useState(false)
@@ -124,10 +126,11 @@ const TableSampleClients = () => {
               <Button
                 key={page}
                 active={page === currentPage}
-                label={page + 1}
+                label={(page + 1).toString()}
                 color={page === currentPage ? 'lightDark' : 'whiteDark'}
                 small
                 onClick={() => setCurrentPage(page)}
+                isGrouped
               />
             ))}
           </Buttons>
