@@ -6,8 +6,8 @@ import CardBox from '../components/CardBox'
 import SectionFullScreen from '../components/Section/FullScreen'
 import LayoutGuest from '../layouts/Guest'
 import { Field, Form, Formik } from 'formik'
-import FormField from '../components/Form/Field'
-import FormCheckRadio from '../components/Form/CheckRadio'
+import FormField from '../components/FormField'
+import FormCheckRadio from '../components/FormField/CheckRadio'
 import Divider from '../components/Divider'
 import Buttons from '../components/Buttons'
 import { useRouter } from 'next/router'
@@ -44,11 +44,11 @@ const LoginPage = () => {
           <Formik initialValues={initialValues} onSubmit={handleSubmit}>
             <Form>
               <FormField label="Login" help="Please enter your login">
-                <Field name="login" />
+                {({className}) => <Field name="login" className={className} />}
               </FormField>
 
               <FormField label="Password" help="Please enter your password">
-                <Field name="password" type="password" />
+                {({className}) => <Field name="password" type="password" className={className} />}
               </FormField>
 
               <FormCheckRadio type="checkbox" label="Remember">

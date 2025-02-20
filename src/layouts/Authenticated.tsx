@@ -8,7 +8,7 @@ import NavBar from '../components/NavBar'
 import NavBarItemPlain from '../components/NavBar/Item/Plain'
 import AsideMenu from '../components/AsideMenu'
 import FooterBar from '../components/FooterBar'
-import FormField from '../components/Form/Field'
+import FormField from '../components/FormField'
 import { Field, Form, Formik } from 'formik'
 import { useRouter } from 'next/router'
 
@@ -71,7 +71,9 @@ export default function LayoutAuthenticated({ children }: Props) {
             >
               <Form>
                 <FormField isBorderless isTransparent>
-                  <Field name="search" placeholder="Search" />
+                  {({ className }) => (
+                    <Field name="search" placeholder="Search" className={className} />
+                  )}
                 </FormField>
               </Form>
             </Formik>

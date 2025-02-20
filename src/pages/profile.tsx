@@ -15,8 +15,8 @@ import Divider from '../components/Divider'
 import CardBox from '../components/CardBox'
 import CardBoxComponentBody from '../components/CardBox/Component/Body'
 import CardBoxComponentFooter from '../components/CardBox/Component/Footer'
-import FormField from '../components/Form/Field'
-import FormFilePicker from '../components/Form/FilePicker'
+import FormField from '../components/FormField'
+import FormFilePicker from '../components/FormField/FilePicker'
 import LayoutAuthenticated from '../layouts/Authenticated'
 import SectionMain from '../components/Section/Main'
 import SectionTitleLineWithButton from '../components/Section/TitleLineWithButton'
@@ -59,7 +59,7 @@ const ProfilePage = () => {
           <div className="flex flex-col">
             <CardBox className="mb-6">
               <FormField label="Avatar" help="Max 500kb">
-                <FormFilePicker label="Upload" color="info" icon={mdiUpload} />
+                {() => <FormFilePicker label="Upload" color="info" icon={mdiUpload} />}
               </FormField>
             </CardBox>
 
@@ -74,17 +74,21 @@ const ProfilePage = () => {
                       label="Name"
                       help="Required. Your name"
                       labelFor="name"
-                      icons={[mdiAccount]}
+                      icon={mdiAccount}
                     >
-                      <Field name="name" id="name" placeholder="Name" />
+                      {({ className }) => (
+                        <Field name="name" id="name" placeholder="Name" className={className} />
+                      )}
                     </FormField>
                     <FormField
                       label="E-mail"
                       help="Required. Your e-mail"
                       labelFor="email"
-                      icons={[mdiMail]}
+                      icon={mdiMail}
                     >
-                      <Field name="email" id="email" placeholder="E-mail" />
+                      {({ className }) => (
+                        <Field name="email" id="email" placeholder="E-mail" className={className} />
+                      )}
                     </FormField>
                   </CardBoxComponentBody>
                   <CardBoxComponentFooter>
@@ -113,14 +117,17 @@ const ProfilePage = () => {
                     label="Current password"
                     help="Required. Your current password"
                     labelFor="currentPassword"
-                    icons={[mdiAsterisk]}
+                    icon={mdiAsterisk}
                   >
-                    <Field
-                      name="currentPassword"
-                      id="currentPassword"
-                      type="password"
-                      autoComplete="current-password"
-                    />
+                    {({ className }) => (
+                      <Field
+                        name="currentPassword"
+                        id="currentPassword"
+                        type="password"
+                        autoComplete="current-password"
+                        className={className}
+                      />
+                    )}
                   </FormField>
 
                   <Divider />
@@ -129,28 +136,34 @@ const ProfilePage = () => {
                     label="New password"
                     help="Required. New password"
                     labelFor="newPassword"
-                    icons={[mdiFormTextboxPassword]}
+                    icon={mdiFormTextboxPassword}
                   >
-                    <Field
-                      name="newPassword"
-                      id="newPassword"
-                      type="password"
-                      autoComplete="new-password"
-                    />
+                    {({ className }) => (
+                      <Field
+                        name="newPassword"
+                        id="newPassword"
+                        type="password"
+                        autoComplete="new-password"
+                        className={className}
+                      />
+                    )}
                   </FormField>
 
                   <FormField
                     label="Confirm password"
                     help="Required. New password one more time"
                     labelFor="newPasswordConfirmation"
-                    icons={[mdiFormTextboxPassword]}
+                    icon={mdiFormTextboxPassword}
                   >
-                    <Field
-                      name="newPasswordConfirmation"
-                      id="newPasswordConfirmation"
-                      type="password"
-                      autoComplete="new-password"
-                    />
+                    {({ className }) => (
+                      <Field
+                        name="newPasswordConfirmation"
+                        id="newPasswordConfirmation"
+                        type="password"
+                        autoComplete="new-password"
+                        className={className}
+                      />
+                    )}
                   </FormField>
                 </CardBoxComponentBody>
 

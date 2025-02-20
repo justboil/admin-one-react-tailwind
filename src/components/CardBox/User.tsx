@@ -2,7 +2,7 @@ import { mdiCheckDecagram } from '@mdi/js'
 import { Field, Form, Formik } from 'formik'
 import { useAppSelector } from '../../stores/hooks'
 import CardBox from '.'
-import FormCheckRadio from '../Form/CheckRadio'
+import FormCheckRadio from '../FormField/CheckRadio'
 import PillTag from '../PillTag'
 import UserAvatarCurrentUser from '../UserAvatar/CurrentUser'
 
