@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier 'src/**/*.{tsx,ts,js}' --write"
+    "format": "prettier 'app/**/*.{tsx,ts,js}' --write"
   },
   "dependencies": {
     "@mdi/js": "^7.0.96",
@@ -23,19 +23,21 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
     "@types/lodash": "^4.17.15",
-    "@types/node": "20.3.2",
     "@types/numeral": "^2.0.2",
     "@types/react-redux": "^7.1.25",
-    "@typescript-eslint/eslint-plugin": "^6.7.3",
-    "@typescript-eslint/parser": "^6.7.3",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.43.0",
-    "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "^9.0.0",
-    "postcss": "^8.4.24",
     "postcss-import": "^15.1.0",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.1.6"
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.0.7",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "postcss": "^8",
+    "typescript": "^5"
   }
 }
