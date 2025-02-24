@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: process.env.IS_OUTPUT_EXPORT ? "export" : "standalone",
   basePath: "/admin-one-react-tailwind",
   async redirects() {
     return [
