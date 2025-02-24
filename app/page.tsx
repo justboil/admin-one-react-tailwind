@@ -2,7 +2,7 @@ import SectionMain from "./_components/Section/Main";
 import { gradientBgPurplePink } from "./_lib/colors";
 import { appTitle } from "./_lib/config";
 import { Metadata } from "next";
-import StylePickBox from "./_components/StylePickBox";
+import StylePickBox from "./_components/StyleSelect/StylePickBox";
 import { Suspense } from "react";
 import { OnVisit } from "./_components/StyleSelect/OnVisit";
 

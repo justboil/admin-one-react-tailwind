@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import CardBox from "./CardBox";
+import CardBox from "../CardBox";
 
 type Props = {
   style: string;
