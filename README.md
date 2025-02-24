@@ -12,11 +12,9 @@
 
 **Admin One** is fast, beautiful and free React Next Tailwind CSS 4.x admin dashboard with TypeScript. 
 
-* Built with **TypeScript**, **React**, **Tailwind CSS 4** framework & **Next.js**
+* Built with **TypeScript**, **React**, **Tailwind CSS 4** framework & **Next.js** with **app router**
 * **React Redux** state library &mdash; [Info](https://react-redux.js.org/)
 * **Dark mode**
-* **Styled** scrollbars
-* SPA with **Next.js**
 * **Production CSS** is only **&thickapprox;38kb**
 * Reusable components
 * Free under MIT License
@@ -102,7 +100,7 @@ Get code & install. Then `dev` or `build`
 
 ### Builds
 
-Build are handled by Next.js CLI &mdash; [Info](https://nextjs.org/docs/api-reference/cli)
+Build are handled by Next.js CLI &mdash; [Info](https://nextjs.org/docs/app/api-reference/cli/next)
 
 #### Hot-reloads for development
 
@@ -118,9 +116,7 @@ npm run build
 
 #### Exports build for static hosts
 
-```
-npm run export
-```
+Set `IS_OUTPUT_EXPORT` environment variable to `true` (or set `output` in next.config.ts)
 
 ### Linting & Formatting
 
@@ -167,8 +163,8 @@ The issue list is reserved exclusively for bug reports and feature requests. Tha
 
 - [JustBoil.me](https://justboil.me/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Next.js Docs](https://nextjs.org/docs/getting-started)
-- [React.js Docs](https://reactjs.org/docs/getting-started.html)
+- [Next.js Docs](https://nextjs.org/docs/app/getting-started)
+- [React.js Docs](https://react.dev/learn)
 - [Redux Docs](https://redux.js.org/introduction/getting-started) & [React-Redux Docs](https://react-redux.js.org/introduction/getting-started)
 - [TypeScript Docs](https://www.typescriptlang.org/docs/)
 - [TypeScript ESLint Docs](https://typescript-eslint.io/docs/)
