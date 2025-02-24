@@ -11,10 +11,11 @@ import { usePathname } from "next/navigation";
 
 type Props = {
   item: MenuAsideItem;
+  onRouteChange: () => void;
   isDropdownList?: boolean;
 };
 
-const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
+const AsideMenuItem = ({ item, isDropdownList = false, ...props }: Props) => {
   const [isLinkActive, setIsLinkActive] = useState(false);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
@@ -65,7 +66,12 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
   return (
     <li>
       {item.href && (
-        <Link href={item.href} target={item.target} className={componentClass}>
+        <Link
+          href={item.href}
+          target={item.target}
+          className={componentClass}
+          onClick={props.onRouteChange}
+        >
           {asideMenuItemInnerContents}
         </Link>
       )}
@@ -83,6 +89,7 @@ const AsideMenuItem = ({ item, isDropdownList = false }: Props) => {
           className={`aside-menu-dropdown ${
             isDropdownActive ? "block dark:bg-slate-800/50" : "hidden"
           }`}
+          onRouteChange={props.onRouteChange}
           isDropdownList
         />
       )}

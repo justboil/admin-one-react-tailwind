@@ -8,6 +8,7 @@ type Props = {
   isAsideMobileExpanded: boolean;
   isAsideLgActive: boolean;
   onAsideLgClose: () => void;
+  onRouteChange: () => void;
 };
 
 export default function AsideMenu({
@@ -23,6 +24,7 @@ export default function AsideMenu({
           !isAsideLgActive ? "lg:hidden xl:flex" : ""
         }`}
         onAsideLgCloseClick={props.onAsideLgClose}
+        onRouteChange={props.onRouteChange}
       />
       {isAsideLgActive && (
         <OverlayLayer zIndex="z-30" onClick={props.onAsideLgClose} />

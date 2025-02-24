@@ -84,6 +84,7 @@ export default function LayoutAuthenticated({ children }: Props) {
           isAsideLgActive={isAsideLgActive}
           menu={menuAside}
           onAsideLgClose={() => setIsAsideLgActive(false)}
+          onRouteChange={handleRouteChange}
         />
         {children}
         <FooterBar>

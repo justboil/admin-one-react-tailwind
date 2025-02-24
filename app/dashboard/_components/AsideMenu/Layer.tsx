@@ -10,6 +10,7 @@ type Props = {
   menu: MenuAsideItem[];
   className?: string;
   onAsideLgCloseClick: () => void;
+  onRouteChange: () => void;
 };
 
 export default function AsideMenuLayer({
@@ -56,10 +57,10 @@ export default function AsideMenuLayer({
             darkMode ? "aside-scrollbars-[slate]" : "aside-scrollbars"
           }`}
         >
-          <AsideMenuList menu={menu} />
+          <AsideMenuList menu={menu} onRouteChange={props.onRouteChange} />
         </div>
         <ul>
-          <AsideMenuItem item={logoutItem} />
+          <AsideMenuItem item={logoutItem} onRouteChange={props.onRouteChange} />
         </ul>
       </div>
     </aside>

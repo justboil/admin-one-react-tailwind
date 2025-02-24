@@ -6,12 +6,14 @@ type Props = {
   menu: MenuAsideItem[];
   isDropdownList?: boolean;
   className?: string;
+  onRouteChange: () => void;
 };
 
 export default function AsideMenuList({
   menu,
   isDropdownList = false,
   className = "",
+  ...props
 }: Props) {
   return (
     <ul className={className}>
@@ -20,6 +22,7 @@ export default function AsideMenuList({
           key={index}
           item={item}
           isDropdownList={isDropdownList}
+          onRouteChange={props.onRouteChange}
         />
       ))}
     </ul>
