@@ -3,6 +3,8 @@ import { gradientBgPurplePink } from "./_lib/colors";
 import { appTitle } from "./_lib/config";
 import { Metadata } from "next";
 import StylePickBox from "./_components/StylePickBox";
+import { Suspense } from "react";
+import { OnVisit } from "./_components/StyleSelect/OnVisit";
 
 export const metadata: Metadata = {
   title: appTitle,
@@ -15,6 +17,9 @@ export default function StyleSelectPage() {
     <div
       className={`flex min-h-screen items-center justify-center ${gradientBgPurplePink}`}
     >
+      <Suspense fallback={null}>
+        <OnVisit />
+      </Suspense>
       <SectionMain>
         <h1 className="text-4xl md:text-5xl text-center text-white font-bold mt-12 mb-3 lg:mt-0">
           Pick a style&hellip;
