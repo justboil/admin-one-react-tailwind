@@ -35,13 +35,13 @@ const FormFilePicker = ({ label, icon, accept, color, isRoundIcon }: Props) => {
         />
         <input
           type="file"
-          className="absolute top-0 left-0 w-full h-full opacity-0 outline-none cursor-pointer -z-1"
+          className="absolute top-0 left-0 w-full h-full opacity-0 outline-hidden cursor-pointer -z-1"
           onChange={handleFileChange}
           accept={accept}
         />
       </label>
       {showFilename && (
-        <div className="px-4 py-2 max-w-full flex-grow-0 overflow-x-hidden bg-gray-100 dark:bg-slate-800 border-gray-200 dark:border-slate-700 border rounded-r">
+        <div className="px-4 py-2 max-w-full grow-0 overflow-x-hidden bg-gray-100 dark:bg-slate-800 border-gray-200 dark:border-slate-700 border rounded-r">
           <span className="text-ellipsis max-w-full line-clamp-1">
             {file.name}
           </span>

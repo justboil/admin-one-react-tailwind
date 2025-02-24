@@ -26,7 +26,7 @@ export default function StyleSelectPage() {
         </h1>
         <h2 className="text-xl md:text-xl text-center text-white mb-12">
           Style switching with a single{" "}
-          <code className="px-1.5 py-0.5 rounded bg-white bg-opacity-20">
+          <code className="px-1.5 py-0.5 rounded-sm bg-white/20">
             action()
           </code>
         </h2>
