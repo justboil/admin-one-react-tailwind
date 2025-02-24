@@ -42,6 +42,7 @@ module.exports = {
     },
   },
   plugins: [
+    /* eslint-disable-next-line */
     require("@tailwindcss/forms"),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
