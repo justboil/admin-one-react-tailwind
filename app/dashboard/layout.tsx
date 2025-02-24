@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, Suspense } from "react";
+import React, { ReactNode } from "react";
 import { useState } from "react";
 import { mdiForwardburger, mdiBackburger, mdiMenu } from "@mdi/js";
 import menuAside from "./_lib/menuAside";
@@ -12,7 +12,6 @@ import AsideMenu from "./_components/AsideMenu";
 import FooterBar from "./_components/FooterBar";
 import FormField from "../_components/FormField";
 import { Field, Form, Formik } from "formik";
-import { NavigationEvents } from "./navigation-events";
 
 type Props = {
   children: ReactNode;
@@ -31,9 +30,6 @@ export default function LayoutAuthenticated({ children }: Props) {
 
   return (
     <div className={`overflow-hidden lg:overflow-visible`}>
-      <Suspense fallback={null}>
-        <NavigationEvents onRouteChange={handleRouteChange} />
-      </Suspense>
       <div
         className={`${layoutAsidePadding} ${
           isAsideMobileExpanded ? "ml-60 lg:ml-0" : ""
