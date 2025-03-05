@@ -4,7 +4,7 @@
 
 ### Tailwind 4.x React with Next.js and TypeScript
 
-[![Free React Tailwind TypeScript admin dashboard with dark mode](https://static.justboil.me/templates/one/repo-tailwind-react.png)](https://justboil.github.io/admin-one-react-tailwind/)
+[![Free React Tailwind TypeScript admin dashboard with dark mode](https://static.justboil.me/templates/one/repo-tailwind-react.png?v=4)](https://justboil.github.io/admin-one-react-tailwind/)
 
 [![React TypeScript Tailwind white & dark styles](https://static.justboil.me/templates/one/repo-styles.png)](https://justboil.github.io/admin-one-react-tailwind/)
 
