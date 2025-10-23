@@ -5,7 +5,67 @@
 }
 
 @utility jb-custom-check {
+  & {
+    @apply inline-flex items-center cursor-pointer relative;
+  }
+
+  & input {
+    @apply absolute left-0 opacity-0 -z-1;
+  }
+
+  & input + .jb-check {
+    @apply border-gray-700 border transition-colors duration-200 dark:bg-slate-800;
+  }
+
   & input:focus + .jb-check {
     @apply ring-3 ring-blue-700;
+  }
+
+  &.checkbox input + .jb-check,
+  &.radio input + .jb-check {
+    @apply block w-5 h-5;
+  }
+
+  &.checkbox input + .jb-check {
+    @apply rounded-sm;
+  }
+
+  &.switch input + .jb-check {
+    @apply flex items-center shrink-0 w-12 h-6 p-0.5 bg-gray-200;
+  }
+
+  &.radio input + .jb-check,
+  &.switch input + .jb-check,
+  &.switch input + .jb-check:before {
+    @apply rounded-full;
+  }
+
+  &.checkbox input:checked + .jb-check,
+  &.radio input:checked + .jb-check {
+    @apply bg-no-repeat bg-center border-4;
+  }
+
+  &.checkbox input:checked + .jb-check {
+    background-image: var(--checkbox-checked);
+  }
+
+  &.radio input:checked + .jb-check {
+    background-image: var(--radio-checked);
+  }
+
+  &.switch input:checked + .jb-check,
+  &.checkbox input:checked + .jb-check,
+  &.radio input:checked + .jb-check {
+    @apply bg-blue-600 border-blue-600;
+  }
+
+  &.switch input + .jb-check:before {
+    content: '';
+    @apply block w-5 h-5 bg-white border border-gray-700;
+  }
+
+  &.switch input:checked + .jb-check:before {
+    transform: var(--switch-checked);
+    @apply border-blue-600;
   }
 }

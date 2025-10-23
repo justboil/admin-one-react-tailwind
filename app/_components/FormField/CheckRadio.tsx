@@ -11,10 +11,10 @@ type Props = {
 const FormCheckRadio = (props: Props) => {
   return (
     <label
-      className={`${props.type} ${props.className} ${props.isGrouped ? "mr-6 mb-3 last:mr-0" : ""}`}
+      className={`jb-custom-check ${props.type} ${props.className} ${props.isGrouped ? "mr-6 mb-3 last:mr-0" : ""}`}
     >
       {props.children}
-      <span className="check" />
+      <span className="jb-check" />
       <span className="pl-2">{props.label}</span>
     </label>
   );
