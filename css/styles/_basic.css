@@ -1,10 +1,16 @@
+@theme {
+  --scrollbar-track-basic: var(--color-gray-900);
+  --scrollbar-thumb-basic: var(--color-gray-600);
+  --scrollbar-basic: var(--scrollbar-thumb-basic) var(--scrollbar-track-basic);
+}
+
 @utility style-basic {
   &:not(.dark) {
     .aside {
       @apply bg-gray-800;
     }
-    .aside-scrollbars {
-      @apply aside-scrollbars-gray;
+    .aside-scrollbar {
+      @apply scrollbar-styled-basic;
     }
     .aside-brand {
       @apply bg-gray-900 text-white;

@@ -1,21 +1,21 @@
 @layer base {
   progress {
-    @apply h-3 rounded-full overflow-hidden;
+    @apply h-3 overflow-hidden rounded-full;
   }
-  
+
   progress::-webkit-progress-bar {
     @apply bg-blue-200;
   }
-  
+
   progress::-webkit-progress-value {
     @apply bg-blue-500;
   }
-  
+
   progress::-moz-progress-bar {
     @apply bg-blue-500;
   }
-  
+
   progress::-ms-fill {
-    @apply bg-blue-500 border-0;
+    @apply border-0 bg-blue-500;
   }
 }

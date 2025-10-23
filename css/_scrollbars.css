@@ -1,5 +1,5 @@
 @utility dark-scrollbars-compat {
-  scrollbar-color: rgb(71, 85, 105) rgb(30, 41, 59);
+  scrollbar-color: var(--color-slate-600) var(--color-slate-800);
 }
 
 @utility dark-scrollbars {
@@ -19,23 +19,48 @@
 @layer base {
   html {
     scrollbar-width: thin;
-    scrollbar-color: rgb(156, 163, 175) rgb(249, 250, 251);
+    scrollbar-color: var(--color-gray-400) var(--color-gray-50);
   }
-  
+
   body::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
-  
+
   body::-webkit-scrollbar-track {
     @apply bg-gray-50;
   }
-  
+
   body::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 rounded-sm;
+    @apply rounded-sm bg-gray-400;
   }
-  
+
   body::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-500;
+  }
+}
+
+@theme {
+  --scrollbar-track-dark: var(--color-slate-900);
+  --scrollbar-thumb-dark: var(--color-slate-600);
+  --scrollbar-dark: var(--scrollbar-thumb-dark) var(--scrollbar-track-dark);
+}
+
+@utility scrollbar-styled-* {
+  scrollbar-width: thin;
+  scrollbar-color: --value(--scrollbar-*);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: --value(--scrollbar-track-*);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.25rem;
+    background-color: --value(--scrollbar-thumb-*);
   }
 }

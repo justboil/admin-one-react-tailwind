@@ -1,8 +1,16 @@
-@import './tailwind/_base.css';
-@import './tailwind/_components.css';
-@import './tailwind/_utilities.css';
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@source inline('style-{basic,white}');
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --transition-position: right, left, top, bottom, margin, padding;
+}
 
 @import './_checkbox-radio-switch.css';
+@import './_keyframes.css';
 @import './_progress.css';
 @import './_scrollbars.css';
 @import './_table.css';
@@ -10,4 +18,20 @@
 @import './styles/_basic.css';
 @import './styles/_white.css';
 
-@config '../tailwind.config.js';
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
