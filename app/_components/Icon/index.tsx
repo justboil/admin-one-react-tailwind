@@ -20,15 +20,8 @@ export default function Icon({
   const iconSize = size ?? 16;
 
   return (
-    <span
-      className={`inline-flex justify-center items-center ${w} ${h} ${className}`}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        width={iconSize}
-        height={iconSize}
-        className="inline-block"
-      >
+    <span className={`inline-flex items-center justify-center ${w} ${h} ${className}`}>
+      <svg viewBox="0 0 24 24" width={iconSize} height={iconSize} className="inline-block">
         <path fill="currentColor" d={path} />
       </svg>
       {children}

@@ -32,21 +32,17 @@ const CardBoxTransaction = (props: Props) => {
 
   return (
     <CardBox className="mb-6 last:mb-0">
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="flex flex-col md:flex-row items-center justify-start mb-6 md:mb-0">
-          <IconRounded
-            icon={icon}
-            color={typeColor()}
-            className="md:mr-6 mb-6 md:mb-0"
-          />
-          <div className="text-center space-y-1 md:text-left md:mr-6">
+      <div className="flex flex-col items-center justify-between md:flex-row">
+        <div className="mb-6 flex flex-col items-center justify-start md:mb-0 md:flex-row">
+          <IconRounded icon={icon} color={typeColor()} className="mb-6 md:mr-6 md:mb-0" />
+          <div className="space-y-1 text-center md:mr-6 md:text-left">
             <h4 className="text-xl">${props.transaction.amount}</h4>
             <p className="text-gray-500 dark:text-slate-400">
               <b>{props.transaction.date}</b> via {props.transaction.business}
             </p>
           </div>
         </div>
-        <div className="text-center md:text-right space-y-2">
+        <div className="space-y-2 text-center md:text-right">
           <p className="text-sm text-gray-500">{props.transaction.name}</p>
           <div>
             <PillTag color={typeColor()} label={props.transaction.type} small />

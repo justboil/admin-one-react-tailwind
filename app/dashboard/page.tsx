@@ -30,11 +30,7 @@ export default function DashboardPage() {
 
   return (
     <SectionMain>
-      <SectionTitleLineWithButton
-        icon={mdiChartTimelineVariant}
-        title="Overview"
-        main
-      >
+      <SectionTitleLineWithButton icon={mdiChartTimelineVariant} title="Overview" main>
         <Button
           href="https://github.com/justboil/admin-one-react-tailwind"
           target="_blank"
@@ -46,7 +42,7 @@ export default function DashboardPage() {
         />
       </SectionTitleLineWithButton>
 
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 mb-6">
+      <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
         <CardBoxWidget
           trendLabel="12%"
           trendType="up"
@@ -78,13 +74,10 @@ export default function DashboardPage() {
         />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="flex flex-col justify-between">
           {transactions.map((transaction: Transaction) => (
-            <CardBoxTransaction
-              key={transaction.id}
-              transaction={transaction}
-            />
+            <CardBoxTransaction key={transaction.id} transaction={transaction} />
           ))}
         </div>
         <div className="flex flex-col justify-between">

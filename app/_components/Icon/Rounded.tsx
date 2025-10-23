@@ -25,12 +25,6 @@ export default function IconRounded({
     : `${colorsText[color]} bg-gray-50 dark:bg-slate-800`;
 
   return (
-    <Icon
-      path={icon}
-      w={w}
-      h={h}
-      size="24"
-      className={`rounded-full ${classAddon} ${className}`}
-    />
+    <Icon path={icon} w={w} h={h} size="24" className={`rounded-full ${classAddon} ${className}`} />
   );
 }

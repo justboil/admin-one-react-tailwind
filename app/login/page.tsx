@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const LoginPage = () => {
   return (
     <SectionFullScreen bg="purplePink">
-      <CardBox className="w-11/12 md:w-7/12 lg:w-6/12 xl:w-4/12 shadow-2xl">
+      <CardBox className="w-11/12 shadow-2xl md:w-7/12 lg:w-6/12 xl:w-4/12">
         <LoginForm />
       </CardBox>
     </SectionFullScreen>

@@ -24,10 +24,7 @@ const TableSampleClients = ({ clients }: Props) => {
   }
 
   const [currentPage, setCurrentPage] = useState(0);
-  const clientsPaginated = clients.slice(
-    perPage * currentPage,
-    perPage * (currentPage + 1),
-  );
+  const clientsPaginated = clients.slice(perPage * currentPage, perPage * (currentPage + 1));
 
   const [isModalInfoActive, setIsModalInfoActive] = useState(false);
   const [isModalTrashActive, setIsModalTrashActive] = useState(false);
@@ -82,11 +79,8 @@ const TableSampleClients = ({ clients }: Props) => {
         <tbody>
           {clientsPaginated.map((client: Client) => (
             <tr key={client.id}>
-              <td className="border-b-0 lg:w-6 before:hidden">
-                <UserAvatar
-                  username={client.name}
-                  className="w-24 h-24 mx-auto lg:w-6 lg:h-6"
-                />
+              <td className="border-b-0 before:hidden lg:w-6">
+                <UserAvatar username={client.name} className="mx-auto h-24 w-24 lg:h-6 lg:w-6" />
               </td>
               <td data-label="Name">{client.name}</td>
               <td data-label="Company">{client.company}</td>
@@ -100,12 +94,10 @@ const TableSampleClients = ({ clients }: Props) => {
                   {client.progress}
                 </progress>
               </td>
-              <td data-label="Created" className="lg:w-1 whitespace-nowrap">
-                <small className="text-gray-500 dark:text-slate-400">
-                  {client.created}
-                </small>
+              <td data-label="Created" className="whitespace-nowrap lg:w-1">
+                <small className="text-gray-500 dark:text-slate-400">{client.created}</small>
               </td>
-              <td className="before:hidden lg:w-1 whitespace-nowrap">
+              <td className="whitespace-nowrap before:hidden lg:w-1">
                 <Buttons type="justify-start lg:justify-end" noWrap>
                   <Button
                     color="info"
@@ -127,8 +119,8 @@ const TableSampleClients = ({ clients }: Props) => {
           ))}
         </tbody>
       </table>
-      <div className="p-3 lg:px-6 border-t border-gray-100 dark:border-slate-800">
-        <div className="flex flex-col md:flex-row items-center justify-between py-3 md:py-0">
+      <div className="border-t border-gray-100 p-3 lg:px-6 dark:border-slate-800">
+        <div className="flex flex-col items-center justify-between py-3 md:flex-row md:py-0">
           <Buttons>
             {pagesList.map((page) => (
               <Button

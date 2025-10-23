@@ -27,14 +27,7 @@ const PillTagTrend = ({ small = false, ...props }: Props) => {
     info: mdiInformationOutline,
   }[props.type];
 
-  return (
-    <PillTag
-      label={props.label}
-      color={props.color}
-      icon={trendIcon}
-      small={small}
-    />
-  );
+  return <PillTag label={props.label} color={props.color} icon={trendIcon} small={small} />;
 };
 
 export default PillTagTrend;

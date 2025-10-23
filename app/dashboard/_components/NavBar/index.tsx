@@ -22,27 +22,24 @@ export default function NavBar({ menu, className = "", children }: Props) {
   };
 
   const handleRouteChange = () => {
-    setIsMenuNavBarActive(false)
-  }
+    setIsMenuNavBarActive(false);
+  };
 
   return (
     <nav
-      className={`${className} top-0 inset-x-0 fixed bg-gray-50 h-14 z-30 transition-(--transition-position) w-screen lg:w-auto dark:bg-slate-800`}
+      className={`${className} fixed inset-x-0 top-0 z-30 h-14 w-screen bg-gray-50 transition-(--transition-position) lg:w-auto dark:bg-slate-800`}
     >
       <div className={`flex lg:items-stretch ${containerMaxW}`}>
-        <div className="flex flex-1 items-stretch h-14">{children}</div>
-        <div className="flex-none items-stretch flex h-14 lg:hidden">
+        <div className="flex h-14 flex-1 items-stretch">{children}</div>
+        <div className="flex h-14 flex-none items-stretch lg:hidden">
           <NavBarItemPlain onClick={handleMenuNavBarToggleClick}>
-            <Icon
-              path={isMenuNavBarActive ? mdiClose : mdiDotsVertical}
-              size="24"
-            />
+            <Icon path={isMenuNavBarActive ? mdiClose : mdiDotsVertical} size="24" />
           </NavBarItemPlain>
         </div>
         <div
           className={`${
             isMenuNavBarActive ? "block" : "hidden"
-          } max-h-[calc(100dvh-(--spacing(14)))] overflow-y-auto lg:overflow-visible absolute w-screen top-14 left-0 bg-gray-50 shadow-lg lg:w-auto lg:flex lg:static lg:shadow-none dark:bg-slate-800`}
+          } absolute top-14 left-0 max-h-[calc(100dvh-(--spacing(14)))] w-screen overflow-y-auto bg-gray-50 shadow-lg lg:static lg:flex lg:w-auto lg:overflow-visible lg:shadow-none dark:bg-slate-800`}
         >
           <NavBarMenuList menu={menu} onRouteChange={handleRouteChange} />
         </div>

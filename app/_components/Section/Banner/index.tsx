@@ -7,9 +7,7 @@ type Props = {
 
 const SectionBanner = ({ className = "", children }: Props) => {
   return (
-    <div className={`${className} rounded-2xl py-12 px-6 lg:px-12 text-center`}>
-      {children}
-    </div>
+    <div className={`${className} rounded-2xl px-6 py-12 text-center lg:px-12`}>{children}</div>
   );
 };
 

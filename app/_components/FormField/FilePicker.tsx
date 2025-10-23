@@ -22,10 +22,10 @@ const FormFilePicker = ({ label, icon, accept, color, isRoundIcon }: Props) => {
   const showFilename = !isRoundIcon && file;
 
   return (
-    <div className="flex items-stretch justify-start relative">
+    <div className="relative flex items-stretch justify-start">
       <label className="inline-flex">
         <Button
-          className={`${isRoundIcon ? "w-12 h-12" : ""} ${showFilename ? "rounded-r-none" : ""}`}
+          className={`${isRoundIcon ? "h-12 w-12" : ""} ${showFilename ? "rounded-r-none" : ""}`}
           iconSize={isRoundIcon ? 24 : undefined}
           label={isRoundIcon ? null : label}
           icon={icon}
@@ -35,16 +35,14 @@ const FormFilePicker = ({ label, icon, accept, color, isRoundIcon }: Props) => {
         />
         <input
           type="file"
-          className="absolute top-0 left-0 w-full h-full opacity-0 outline-hidden cursor-pointer -z-1"
+          className="absolute top-0 left-0 -z-1 h-full w-full cursor-pointer opacity-0 outline-hidden"
           onChange={handleFileChange}
           accept={accept}
         />
       </label>
       {showFilename && (
-        <div className="px-4 py-2 max-w-full grow-0 overflow-x-hidden bg-gray-100 dark:bg-slate-800 border-gray-200 dark:border-slate-700 border rounded-r">
-          <span className="text-ellipsis max-w-full line-clamp-1">
-            {file.name}
-          </span>
+        <div className="max-w-full grow-0 overflow-x-hidden rounded-r border border-gray-200 bg-gray-100 px-4 py-2 dark:border-slate-700 dark:bg-slate-800">
+          <span className="line-clamp-1 max-w-full text-ellipsis">{file.name}</span>
         </div>
       )}
     </div>

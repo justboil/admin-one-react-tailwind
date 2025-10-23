@@ -1,9 +1,4 @@
-import {
-  mdiGithub,
-  mdiMonitorCellphone,
-  mdiTableBorder,
-  mdiTableOff,
-} from "@mdi/js";
+import { mdiGithub, mdiMonitorCellphone, mdiTableBorder, mdiTableOff } from "@mdi/js";
 import Button from "../../_components/Button";
 import CardBox from "../../_components/CardBox";
 import CardBoxComponentEmpty from "../../_components/CardBox/Component/Empty";

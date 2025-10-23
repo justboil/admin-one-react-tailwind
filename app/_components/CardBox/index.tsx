@@ -46,9 +46,7 @@ export default function CardBox({
       children
     ) : (
       <>
-        <CardBoxComponentBody noPadding={hasTable}>
-          {children}
-        </CardBoxComponentBody>
+        <CardBoxComponentBody noPadding={hasTable}>{children}</CardBoxComponentBody>
         {footer && <CardBoxComponentFooter>{footer}</CardBoxComponentFooter>}
       </>
     ),

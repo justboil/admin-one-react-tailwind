@@ -11,7 +11,7 @@ type Props = {
 const PillTagPlain = ({ small = false, className = "", ...props }: Props) => {
   return (
     <div
-      className={`inline-flex items-center capitalize leading-none ${
+      className={`inline-flex items-center leading-none capitalize ${
         small ? "text-xs" : "text-sm"
       } ${className}`}
     >

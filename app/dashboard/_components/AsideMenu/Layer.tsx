@@ -12,11 +12,7 @@ type Props = {
   onRouteChange: () => void;
 };
 
-export default function AsideMenuLayer({
-  menu,
-  className = "",
-  ...props
-}: Props) {
+export default function AsideMenuLayer({ menu, className = "", ...props }: Props) {
   const logoutItem: MenuAsideItem = {
     label: "Logout",
     icon: mdiLogout,
@@ -31,26 +27,26 @@ export default function AsideMenuLayer({
 
   return (
     <aside
-      className={`${className} zzz lg:py-2 lg:pl-2 w-60 fixed flex z-40 top-0 h-screen transition-(--transition-position) overflow-hidden`}
+      className={`${className} zzz fixed top-0 z-40 flex h-screen w-60 overflow-hidden transition-(--transition-position) lg:py-2 lg:pl-2`}
     >
       <div
-        className={`aside lg:rounded-2xl flex-1 flex flex-col overflow-hidden dark:bg-slate-900`}
+        className={`aside flex flex-1 flex-col overflow-hidden lg:rounded-2xl dark:bg-slate-900`}
       >
         <div
-          className={`aside-brand flex flex-row h-14 items-center justify-between dark:bg-slate-900`}
+          className={`aside-brand flex h-14 flex-row items-center justify-between dark:bg-slate-900`}
         >
-          <div className="text-center flex-1 lg:text-left lg:pl-6 xl:text-center xl:pl-0">
+          <div className="flex-1 text-center lg:pl-6 lg:text-left xl:pl-0 xl:text-center">
             <b className="font-black">One</b>
           </div>
           <button
-            className="hidden lg:inline-block xl:hidden p-3"
+            className="hidden p-3 lg:inline-block xl:hidden"
             onClick={handleAsideLgCloseClick}
           >
             <Icon path={mdiClose} />
           </button>
         </div>
         <div
-          className={`flex-1 overflow-y-auto overflow-x-hidden aside-scrollbar dark:scrollbar-styled-dark`}
+          className={`aside-scrollbar flex-1 overflow-x-hidden overflow-y-auto dark:scrollbar-styled-dark`}
         >
           <AsideMenuList menu={menu} onRouteChange={props.onRouteChange} />
         </div>

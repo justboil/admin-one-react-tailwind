@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  mdiAccount,
-  mdiBallotOutline,
-  mdiGithub,
-  mdiMail,
-  mdiUpload,
-} from "@mdi/js";
+import { mdiAccount, mdiBallotOutline, mdiGithub, mdiMail, mdiUpload } from "@mdi/js";
 import { Field, Form, Formik } from "formik";
 import Head from "next/head";
 import Button from "../../_components/Button";
@@ -31,11 +25,7 @@ export default function FormsPage() {
       </Head>
 
       <SectionMain>
-        <SectionTitleLineWithButton
-          icon={mdiBallotOutline}
-          title="Formik forms example"
-          main
-        >
+        <SectionTitleLineWithButton icon={mdiBallotOutline} title="Formik forms example" main>
           <Button
             href="https://github.com/justboil/admin-one-react-tailwind"
             target="_blank"
@@ -59,7 +49,7 @@ export default function FormsPage() {
             onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
           >
             <Form>
-              <div className="grid grid-cols-1 gap-3 md:grid-cols-2 mb-6 last:mb-0">
+              <div className="mb-6 grid grid-cols-1 gap-3 last:mb-0 md:grid-cols-2">
                 <div>
                   <FormField label="Name" labelFor="fullname" icon={mdiAccount}>
                     {({ className }) => (
@@ -93,23 +83,13 @@ export default function FormsPage() {
                 help="Help line comes here"
               >
                 {({ className }) => (
-                  <Field
-                    name="phone"
-                    placeholder="Phone"
-                    id="phone"
-                    className={className}
-                  />
+                  <Field name="phone" placeholder="Phone" id="phone" className={className} />
                 )}
               </FormField>
 
               <FormField label="Dropdown" labelFor="color">
                 {({ className }) => (
-                  <Field
-                    name="color"
-                    id="color"
-                    component="select"
-                    className={className}
-                  >
+                  <Field name="color" id="color" component="select" className={className}>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
                     <option value="blue">Blue</option>
@@ -135,13 +115,7 @@ export default function FormsPage() {
 
               <Buttons>
                 <Button type="submit" color="info" label="Submit" isGrouped />
-                <Button
-                  type="reset"
-                  color="info"
-                  outline
-                  label="Reset"
-                  isGrouped
-                />
+                <Button type="reset" color="info" outline label="Reset" isGrouped />
               </Buttons>
             </Form>
           </Formik>
@@ -204,13 +178,7 @@ export default function FormsPage() {
 
               <Buttons>
                 <Button type="submit" color="info" label="Submit" isGrouped />
-                <Button
-                  type="reset"
-                  color="info"
-                  outline
-                  label="Reset"
-                  isGrouped
-                />
+                <Button type="reset" color="info" outline label="Reset" isGrouped />
               </Buttons>
             </Form>
           </Formik>

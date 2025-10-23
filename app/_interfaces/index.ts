@@ -26,14 +26,7 @@ export type MenuNavBarItem = {
   menu?: MenuNavBarItem[];
 };
 
-export type ColorKey =
-  | "white"
-  | "light"
-  | "contrast"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info";
+export type ColorKey = "white" | "light" | "contrast" | "success" | "danger" | "warning" | "info";
 
 export type ColorButtonKey =
   | "white"
@@ -48,13 +41,7 @@ export type ColorButtonKey =
 
 export type BgKey = "purplePink" | "pinkRed";
 
-export type TrendType =
-  | "up"
-  | "down"
-  | "success"
-  | "danger"
-  | "warning"
-  | "info";
+export type TrendType = "up" | "down" | "success" | "danger" | "warning" | "info";
 
 export type TransactionType = "withdraw" | "deposit" | "invoice" | "payment";
 

@@ -33,7 +33,7 @@ export default function LayoutAuthenticated({ children }: Props) {
       <div
         className={`${layoutAsidePadding} ${
           isAsideMobileExpanded ? "ml-60 lg:ml-0" : ""
-        } pt-14 min-h-screen w-screen transition-(--transition-position) lg:w-auto bg-gray-50 dark:bg-slate-800 dark:text-slate-100`}
+        } min-h-screen w-screen bg-gray-50 pt-14 transition-(--transition-position) lg:w-auto dark:bg-slate-800 dark:text-slate-100`}
       >
         <NavBar
           menu={menuNavBar}
@@ -43,10 +43,7 @@ export default function LayoutAuthenticated({ children }: Props) {
             display="flex lg:hidden"
             onClick={() => setIsAsideMobileExpanded(!isAsideMobileExpanded)}
           >
-            <Icon
-              path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger}
-              size="24"
-            />
+            <Icon path={isAsideMobileExpanded ? mdiBackburger : mdiForwardburger} size="24" />
           </NavBarItemPlain>
           <NavBarItemPlain
             display="hidden lg:flex xl:hidden"
@@ -64,11 +61,7 @@ export default function LayoutAuthenticated({ children }: Props) {
               <Form>
                 <FormField isBorderless isTransparent>
                   {({ className }) => (
-                    <Field
-                      name="search"
-                      placeholder="Search"
-                      className={className}
-                    />
+                    <Field name="search" placeholder="Search" className={className} />
                   )}
                 </FormField>
               </Form>

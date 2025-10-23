@@ -26,9 +26,7 @@ export default function AsideMenu({
         onAsideLgCloseClick={props.onAsideLgClose}
         onRouteChange={props.onRouteChange}
       />
-      {isAsideLgActive && (
-        <OverlayLayer zIndex="z-30" onClick={props.onAsideLgClose} />
-      )}
+      {isAsideLgActive && <OverlayLayer zIndex="z-30" onClick={props.onAsideLgClose} />}
     </>
   );
 }

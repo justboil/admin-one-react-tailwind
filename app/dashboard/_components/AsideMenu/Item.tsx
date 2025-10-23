@@ -19,8 +19,7 @@ const AsideMenuItem = ({ item, isDropdownList = false, ...props }: Props) => {
   const [isLinkActive, setIsLinkActive] = useState(false);
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
-  const activeClassAddon =
-    !item.color && isLinkActive ? "aside-menu-item-active font-bold" : "";
+  const activeClassAddon = !item.color && isLinkActive ? "aside-menu-item-active font-bold" : "";
 
   const pathname = usePathname();
 
@@ -31,15 +30,10 @@ const AsideMenuItem = ({ item, isDropdownList = false, ...props }: Props) => {
   const asideMenuItemInnerContents = (
     <>
       {item.icon && (
-        <Icon
-          path={item.icon}
-          className={`flex-none ${activeClassAddon}`}
-          w="w-16"
-          size="18"
-        />
+        <Icon path={item.icon} className={`flex-none ${activeClassAddon}`} w="w-16" size="18" />
       )}
       <span
-        className={`grow text-ellipsis line-clamp-1 ${
+        className={`line-clamp-1 grow text-ellipsis ${
           item.menu ? "" : "pr-12"
         } ${activeClassAddon}`}
       >
@@ -76,10 +70,7 @@ const AsideMenuItem = ({ item, isDropdownList = false, ...props }: Props) => {
         </Link>
       )}
       {!item.href && (
-        <div
-          className={componentClass}
-          onClick={() => setIsDropdownActive(!isDropdownActive)}
-        >
+        <div className={componentClass} onClick={() => setIsDropdownActive(!isDropdownActive)}>
           {asideMenuItemInnerContents}
         </div>
       )}

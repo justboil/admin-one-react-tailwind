@@ -28,9 +28,7 @@ const FormField = ({ children, ...props }: Props) => {
 
   return (
     <div className="mb-6 last:mb-0">
-      {props.label && (
-        <FieldLabel htmlFor={props.labelFor}>{props.label}</FieldLabel>
-      )}
+      {props.label && <FieldLabel htmlFor={props.labelFor}>{props.label}</FieldLabel>}
       <div className="relative">
         {children(fieldData)}
         {props.icon && (
@@ -38,14 +36,12 @@ const FormField = ({ children, ...props }: Props) => {
             path={props.icon}
             w="w-10"
             h={props.hasTextareaHeight ? "h-full" : "h-12"}
-            className="absolute top-0 left-0 z-10 pointer-events-none text-gray-500 dark:text-slate-400"
+            className="pointer-events-none absolute top-0 left-0 z-10 text-gray-500 dark:text-slate-400"
           />
         )}
       </div>
       {props.help && (
-        <div className="text-xs text-gray-500 dark:text-slate-400 mt-1">
-          {props.help}
-        </div>
+        <div className="mt-1 text-xs text-gray-500 dark:text-slate-400">{props.help}</div>
       )}
     </div>
   );

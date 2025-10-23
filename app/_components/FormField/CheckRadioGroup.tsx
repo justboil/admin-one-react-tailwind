@@ -7,9 +7,7 @@ type Props = {
 
 const FormCheckRadioGroup = (props: Props) => {
   return (
-    <div
-      className={`flex justify-start flex-wrap -mb-3 ${props.isColumn ? "flex-col" : ""}`}
-    >
+    <div className={`-mb-3 flex flex-wrap justify-start ${props.isColumn ? "flex-col" : ""}`}>
       {props.children}
     </div>
   );

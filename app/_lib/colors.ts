@@ -28,9 +28,7 @@ export const colorsText = {
 export const colorsOutline = {
   white: [colorsText.white, "border-gray-100"].join(" "),
   light: [colorsText.light, "border-gray-100"].join(" "),
-  contrast: [colorsText.contrast, "border-gray-900 dark:border-slate-100"].join(
-    " ",
-  ),
+  contrast: [colorsText.contrast, "border-gray-900 dark:border-slate-100"].join(" "),
   success: [colorsText.success, "border-emerald-500"].join(" "),
   danger: [colorsText.danger, "border-red-500"].join(" "),
   warning: [colorsText.warning, "border-yellow-500"].join(" "),
@@ -121,8 +119,7 @@ export const getButtonColor = (
     },
   };
 
-  const isOutlinedProcessed =
-    isOutlined && ["white", "whiteDark", "lightDark"].indexOf(color) < 0;
+  const isOutlinedProcessed = isOutlined && ["white", "whiteDark", "lightDark"].indexOf(color) < 0;
 
   const base = [colors.borders[color], colors.ring[color]];
 
@@ -133,9 +130,7 @@ export const getButtonColor = (
   }
 
   if (hasHover) {
-    base.push(
-      isOutlinedProcessed ? colors.outlineHover[color] : colors.bgHover[color],
-    );
+    base.push(isOutlinedProcessed ? colors.outlineHover[color] : colors.bgHover[color]);
   }
 
   return base.join(" ");

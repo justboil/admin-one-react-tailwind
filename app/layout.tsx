@@ -5,8 +5,7 @@ import Script from "next/script";
 
 const title = `Admin One React Tailwind free`;
 
-const description =
-  "Admin One - free React Next Tailwind dashboard with TypeScript and dark mode";
+const description = "Admin One - free React Next Tailwind dashboard with TypeScript and dark mode";
 
 const url = "https://justboil.github.io/admin-one-react-tailwind/";
 
@@ -62,9 +61,7 @@ export default function RootLayout({
             gtag('config', 'UA-130795909-1');
           `}
         </Script>
-        <body
-          className={`bg-gray-50 dark:bg-slate-800 dark:text-slate-100 antialiased`}
-        >
+        <body className={`bg-gray-50 antialiased dark:bg-slate-800 dark:text-slate-100`}>
           {children}
         </body>
       </html>

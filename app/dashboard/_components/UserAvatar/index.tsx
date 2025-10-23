@@ -28,7 +28,7 @@ export default function UserAvatar({
       <img
         src={avatarImage}
         alt={username ?? undefined}
-        className="rounded-full block h-auto w-full max-w-full bg-gray-100 dark:bg-slate-800"
+        className="block h-auto w-full max-w-full rounded-full bg-gray-100 dark:bg-slate-800"
       />
       {children}
     </div>

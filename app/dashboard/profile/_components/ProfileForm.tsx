@@ -25,34 +25,20 @@ export default function ProfileForm() {
     <div className="flex flex-col">
       <CardBox className="mb-6">
         <FormField label="Avatar" help="Max 500kb">
-          {() => (
-            <FormFilePicker label="Upload" color="info" icon={mdiUpload} />
-          )}
+          {() => <FormFilePicker label="Upload" color="info" icon={mdiUpload} />}
         </FormField>
       </CardBox>
 
       <CardBox className="flex-1" hasComponentLayout>
         <Formik
           initialValues={userForm}
-          onSubmit={(values: UserForm) =>
-            alert(JSON.stringify(values, null, 2))
-          }
+          onSubmit={(values: UserForm) => alert(JSON.stringify(values, null, 2))}
         >
-          <Form className="flex flex-col flex-1">
+          <Form className="flex flex-1 flex-col">
             <CardBoxComponentBody>
-              <FormField
-                label="Name"
-                help="Required. Your name"
-                labelFor="name"
-                icon={mdiAccount}
-              >
+              <FormField label="Name" help="Required. Your name" labelFor="name" icon={mdiAccount}>
                 {({ className }) => (
-                  <Field
-                    name="name"
-                    id="name"
-                    placeholder="Name"
-                    className={className}
-                  />
+                  <Field name="name" id="name" placeholder="Name" className={className} />
                 )}
               </FormField>
               <FormField
@@ -62,12 +48,7 @@ export default function ProfileForm() {
                 icon={mdiMail}
               >
                 {({ className }) => (
-                  <Field
-                    name="email"
-                    id="email"
-                    placeholder="E-mail"
-                    className={className}
-                  />
+                  <Field name="email" id="email" placeholder="E-mail" className={className} />
                 )}
               </FormField>
             </CardBoxComponentBody>

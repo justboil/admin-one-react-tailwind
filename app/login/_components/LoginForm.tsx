@@ -35,9 +35,7 @@ export default function LoginForm() {
         </FormField>
 
         <FormField label="Password" help="Please enter your password">
-          {({ className }) => (
-            <Field name="password" type="password" className={className} />
-          )}
+          {({ className }) => <Field name="password" type="password" className={className} />}
         </FormField>
 
         <FormCheckRadio type="checkbox" label="Remember">
@@ -48,13 +46,7 @@ export default function LoginForm() {
 
         <Buttons>
           <Button type="submit" label="Login" color="info" isGrouped />
-          <Button
-            href="/dashboard"
-            label="Home"
-            color="info"
-            outline
-            isGrouped
-          />
+          <Button href="/dashboard" label="Home" color="info" outline isGrouped />
         </Buttons>
       </Form>
     </Formik>

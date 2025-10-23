@@ -78,9 +78,7 @@ export default function Button({
   const componentChildren = (
     <>
       {icon && <Icon path={icon} size={iconSize} />}
-      {label && (
-        <span className={small && icon ? "px-1" : "px-2"}>{label}</span>
-      )}
+      {label && <span className={small && icon ? "px-1" : "px-2"}>{label}</span>}
     </>
   );
 

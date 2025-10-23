@@ -50,14 +50,12 @@ export default function NavBarItem({ item, ...props }: Props) {
       <div
         className={`flex items-center ${
           item.menu
-            ? "bg-gray-100 dark:bg-slate-800 lg:bg-transparent lg:dark:bg-transparent p-3 lg:p-0"
+            ? "bg-gray-100 p-3 lg:bg-transparent lg:p-0 dark:bg-slate-800 lg:dark:bg-transparent"
             : ""
         }`}
         onClick={handleMenuClick}
       >
-        {item.isCurrentUser && (
-          <UserAvatarCurrentUser className="w-6 h-6 mr-3 inline-flex" />
-        )}
+        {item.isCurrentUser && <UserAvatarCurrentUser className="mr-3 inline-flex h-6 w-6" />}
         {item.icon && <Icon path={item.icon} className="transition-colors" />}
         <span
           className={`px-2 transition-colors ${
@@ -69,7 +67,7 @@ export default function NavBarItem({ item, ...props }: Props) {
         {item.menu && (
           <Icon
             path={isDropdownActive ? mdiChevronUp : mdiChevronDown}
-            className="hidden lg:inline-flex transition-colors"
+            className="hidden transition-colors lg:inline-flex"
           />
         )}
       </div>
@@ -77,12 +75,9 @@ export default function NavBarItem({ item, ...props }: Props) {
         <div
           className={`${
             !isDropdownActive ? "lg:hidden" : ""
-          } text-sm border-b border-gray-100 lg:border lg:bg-white lg:absolute lg:top-full lg:left-0 lg:min-w-full lg:z-20 lg:rounded-lg lg:shadow-lg lg:dark:bg-slate-800 dark:border-slate-700`}
+          } border-b border-gray-100 text-sm lg:absolute lg:top-full lg:left-0 lg:z-20 lg:min-w-full lg:rounded-lg lg:border lg:bg-white lg:shadow-lg dark:border-slate-700 lg:dark:bg-slate-800`}
         >
-          <NavBarMenuList
-            menu={item.menu}
-            onRouteChange={props.onRouteChange}
-          />
+          <NavBarMenuList menu={item.menu} onRouteChange={props.onRouteChange} />
         </div>
       )}
     </>

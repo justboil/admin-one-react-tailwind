@@ -14,10 +14,7 @@ export default function PillsExample() {
   return (
     <SectionMain>
       <CardBox>
-        <Formik
-          initialValues={{ outline: false, small: false, icon: true }}
-          onSubmit={() => {}}
-        >
+        <Formik initialValues={{ outline: false, small: false, icon: true }} onSubmit={() => {}}>
           {({ values }) => (
             <>
               <FormCheckRadioGroup>

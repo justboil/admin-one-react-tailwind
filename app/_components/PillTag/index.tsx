@@ -13,21 +13,14 @@ type Props = {
   isGrouped?: boolean;
 };
 
-const PillTag = ({
-  small = false,
-  outline = false,
-  className = "",
-  ...props
-}: Props) => {
+const PillTag = ({ small = false, outline = false, className = "", ...props }: Props) => {
   const layoutClassName = small ? "py-1 px-3" : "py-1.5 px-4";
-  const colorClassName = outline
-    ? colorsOutline[props.color]
-    : colorsBgLight[props.color];
+  const colorClassName = outline ? colorsOutline[props.color] : colorsBgLight[props.color];
   const groupedClassName = props.isGrouped ? "mr-3 last:mr-0 mb-3" : "";
 
   return (
     <PillTagPlain
-      className={`border rounded-full ${layoutClassName} ${colorClassName} ${groupedClassName} ${className}`}
+      className={`rounded-full border ${layoutClassName} ${colorClassName} ${groupedClassName} ${className}`}
       icon={props.icon}
       label={props.label}
       small={small}

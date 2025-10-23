@@ -21,7 +21,7 @@ export default function PasswordForm() {
         }}
         onSubmit={(values) => alert(JSON.stringify(values, null, 2))}
       >
-        <Form className="flex flex-col flex-1">
+        <Form className="flex flex-1 flex-col">
           <CardBoxComponentBody>
             <FormField
               label="Current password"

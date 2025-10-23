@@ -10,8 +10,7 @@ import CardBoxModal from "../../../_components/CardBox/Modal";
 import SectionMain from "../../../_components/Section/Main";
 
 export default function ModalExamples() {
-  const modalSampleCardClassName =
-    "cursor-pointer md:w-7/12 lg:w-5/12 shadow-2xl md:mx-auto";
+  const modalSampleCardClassName = "cursor-pointer md:w-7/12 lg:w-5/12 shadow-2xl md:mx-auto";
 
   const modalSampleContents = (
     <>

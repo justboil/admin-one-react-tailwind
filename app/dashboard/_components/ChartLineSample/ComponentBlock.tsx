@@ -23,9 +23,7 @@ export default function ChartLineSampleComponentBlock() {
         <Button icon={mdiReload} color="whiteDark" onClick={fillChartData} />
       </SectionTitleLineWithButton>
 
-      <CardBox className="mb-6">
-        {chartData && <ChartLineSample data={chartData} />}
-      </CardBox>
+      <CardBox className="mb-6">{chartData && <ChartLineSample data={chartData} />}</CardBox>
     </>
   );
 }

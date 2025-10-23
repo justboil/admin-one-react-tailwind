@@ -10,14 +10,7 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-Chart.register(
-  LineElement,
-  PointElement,
-  LineController,
-  LinearScale,
-  CategoryScale,
-  Tooltip,
-);
+Chart.register(LineElement, PointElement, LineController, LinearScale, CategoryScale, Tooltip);
 
 const options = {
   responsive: true,

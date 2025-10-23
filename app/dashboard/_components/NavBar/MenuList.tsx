@@ -11,11 +11,7 @@ export default function NavBarMenuList({ menu, ...props }: Props) {
   return (
     <>
       {menu.map((item, index) => (
-        <NavBarItem
-          key={index}
-          item={item}
-          onRouteChange={props.onRouteChange}
-        />
+        <NavBarItem key={index} item={item} onRouteChange={props.onRouteChange} />
       ))}
     </>
   );

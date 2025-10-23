@@ -29,13 +29,10 @@ const CardBoxClient = (props: Props) => {
 
   return (
     <CardBox className="mb-6 last:mb-0">
-      <div className="flex flex-col md:flex-row items-center justify-between">
-        <div className="flex flex-col md:flex-row items-center justify-start mb-6 md:mb-0">
-          <UserAvatar
-            className="w-12 h-12 md:mr-6 mb-6 md:mb-0"
-            username={props.client.name}
-          />
-          <div className="text-center md:text-left overflow-hidden">
+      <div className="flex flex-col items-center justify-between md:flex-row">
+        <div className="mb-6 flex flex-col items-center justify-start md:mb-0 md:flex-row">
+          <UserAvatar className="mb-6 h-12 w-12 md:mr-6 md:mb-0" username={props.client.name} />
+          <div className="overflow-hidden text-center md:text-left">
             <h4 className="text-xl text-ellipsis">{props.client.name}</h4>
             <p className="text-gray-500 dark:text-slate-400">
               {props.client.created} @ {props.client.login}
@@ -43,11 +40,7 @@ const CardBoxClient = (props: Props) => {
           </div>
         </div>
 
-        <PillTag
-          color={pillColor()}
-          icon={pillIcon}
-          label={`${props.client.progress}%`}
-        />
+        <PillTag color={pillColor()} icon={pillIcon} label={`${props.client.progress}%`} />
       </div>
     </CardBox>
   );

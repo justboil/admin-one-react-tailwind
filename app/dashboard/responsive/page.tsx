@@ -14,7 +14,7 @@ export default function ResponsivePage() {
       <SectionTitle first>Mobile & Tablet</SectionTitle>
 
       <SectionMain>
-        <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
+        <div className="overflow-hidden rounded-3xl border-8 border-white shadow-2xl md:mx-auto md:w-10/12">
           <Image
             src="https://static.justboil.me/templates/one/one-tailwind-vue-mobile.png"
             width={1920}
@@ -28,7 +28,7 @@ export default function ResponsivePage() {
       <SectionTitle>Small laptop 1024px</SectionTitle>
 
       <SectionMain>
-        <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
+        <div className="overflow-hidden rounded-3xl border-8 border-white shadow-2xl md:mx-auto md:w-10/12">
           <Image
             src="https://static.justboil.me/templates/one/one-tailwind-vue-1024.png"
             width={1920}
@@ -40,7 +40,7 @@ export default function ResponsivePage() {
       </SectionMain>
 
       <SectionMain>
-        <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
+        <div className="overflow-hidden rounded-3xl border-8 border-white shadow-2xl md:mx-auto md:w-10/12">
           <Image
             src="https://static.justboil.me/templates/one/one-tailwind-vue-1024-menu-open.png"
             width={1920}
@@ -54,7 +54,7 @@ export default function ResponsivePage() {
       <SectionTitle>Laptop & desktop</SectionTitle>
 
       <SectionMain>
-        <div className="md:w-10/12 shadow-2xl md:mx-auto rounded-3xl border-8 border-white overflow-hidden">
+        <div className="overflow-hidden rounded-3xl border-8 border-white shadow-2xl md:mx-auto md:w-10/12">
           <Image
             src="https://static.justboil.me/templates/one/one-tailwind-vue-widescreen.png"
             width={1920}

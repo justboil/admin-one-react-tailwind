@@ -20,10 +20,8 @@ export default function NotificationsExample() {
       {({ values }) => (
         <>
           <SectionTitle custom>
-            <h1 className="text-2xl text-gray-500 dark:text-slate-400">
-              Notifications
-            </h1>
-            <div className="flex items-center justify-center mt-6">
+            <h1 className="text-2xl text-gray-500 dark:text-slate-400">Notifications</h1>
+            <div className="mt-6 flex items-center justify-center">
               <FormCheckRadio type="switch" label="Outline">
                 <Field type="checkbox" name="outline" />
               </FormCheckRadio>
@@ -99,11 +97,7 @@ export default function NotificationsExample() {
               <b>Danger state</b>. NotificationBar
             </NotificationBar>
 
-            <NotificationBar
-              color="contrast"
-              icon={mdiContrastCircle}
-              outline={values.outline}
-            >
+            <NotificationBar color="contrast" icon={mdiContrastCircle} outline={values.outline}>
               <b>Contrast</b>. NotificationBar
             </NotificationBar>
           </SectionMain>

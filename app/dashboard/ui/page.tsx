@@ -50,7 +50,7 @@ export default function UiPage() {
       <SectionTitle>Cards</SectionTitle>
 
       <SectionMain>
-        <div className="grid grid-cols-1 gap-6 mb-6 lg:grid-cols-2">
+        <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <CardBox footer={CardSamplesFooter}>
             <CardBoxComponentTitle title="With title & icon">
               <Button icon={mdiReload} color="whiteDark" roundedFull />
@@ -63,10 +63,7 @@ export default function UiPage() {
           <CardBox footer={CardSamplesFooter}>Just body & footer</CardBox>
         </div>
 
-        <SectionTitleLineWithButton
-          icon={mdiAlertCircle}
-          title="Empty variation"
-        />
+        <SectionTitleLineWithButton icon={mdiAlertCircle} title="Empty variation" />
 
         <CardBox>
           <CardBoxComponentEmpty />

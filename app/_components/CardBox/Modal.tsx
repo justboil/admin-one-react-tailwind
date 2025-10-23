@@ -32,43 +32,23 @@ const CardBoxModal = ({
 
   const footer = (
     <Buttons>
-      <Button
-        label={buttonLabel}
-        color={buttonColor}
-        onClick={onConfirm}
-        isGrouped
-      />
+      <Button label={buttonLabel} color={buttonColor} onClick={onConfirm} isGrouped />
       {!!onCancel && (
-        <Button
-          label="Cancel"
-          color={buttonColor}
-          outline
-          onClick={onCancel}
-          isGrouped
-        />
+        <Button label="Cancel" color={buttonColor} outline onClick={onCancel} isGrouped />
       )}
     </Buttons>
   );
 
   return (
-    <OverlayLayer
-      onClick={onCancel}
-      className={onCancel ? "cursor-pointer" : ""}
-    >
+    <OverlayLayer onClick={onCancel} className={onCancel ? "cursor-pointer" : ""}>
       <CardBox
-        className={`transition-transform shadow-lg max-h-[calc(100dvh-(--spacing(40)))] animate-fade-in w-11/12 md:w-3/5 lg:w-2/5 xl:w-4/12 z-50`}
+        className={`z-50 max-h-[calc(100dvh-(--spacing(40)))] w-11/12 animate-fade-in shadow-lg transition-transform md:w-3/5 lg:w-2/5 xl:w-4/12`}
         isModal
         footer={footer}
       >
         <CardBoxComponentTitle title={title}>
           {!!onCancel && (
-            <Button
-              icon={mdiClose}
-              color="whiteDark"
-              onClick={onCancel}
-              small
-              roundedFull
-            />
+            <Button icon={mdiClose} color="whiteDark" onClick={onCancel} small roundedFull />
           )}
         </CardBoxComponentTitle>
 

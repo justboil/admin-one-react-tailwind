@@ -7,10 +7,7 @@ type Props = {
   children?: ReactNode;
 };
 
-export default function UserAvatarCurrentUser({
-  className = "",
-  children,
-}: Props) {
+export default function UserAvatarCurrentUser({ className = "", children }: Props) {
   const userEmail = useAppSelector((state) => state.main.userEmail);
 
   return (

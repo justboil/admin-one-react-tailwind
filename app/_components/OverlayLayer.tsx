@@ -25,7 +25,7 @@ export default function OverlayLayer({
 
   return (
     <div
-      className={`${type} ${zIndex} ${className} items-center flex-col justify-center overflow-hidden fixed inset-0`}
+      className={`${type} ${zIndex} ${className} fixed inset-0 flex-col items-center justify-center overflow-hidden`}
     >
       <div
         className={`overlay absolute inset-0 animate-overlay-fade-in bg-linear-to-tr opacity-90 dark:from-gray-700 dark:via-gray-900 dark:to-gray-700`}

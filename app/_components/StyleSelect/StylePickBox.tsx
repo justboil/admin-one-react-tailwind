@@ -37,7 +37,7 @@ export default function StylePickBox({ style }: Props) {
           alt={style}
         />
       </div>
-      <h1 className="text-xl md:text-2xl font-black capitalize">{style}</h1>
+      <h1 className="text-xl font-black capitalize md:text-2xl">{style}</h1>
       <h2 className="text-lg md:text-xl">& Dark mode</h2>
     </CardBox>
   );

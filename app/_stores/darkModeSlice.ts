@@ -13,13 +13,10 @@ export const styleSlice = createSlice({
   initialState,
   reducers: {
     setDarkMode: (state, action: PayloadAction<boolean | null>) => {
-      state.isEnabled =
-        action.payload !== null ? action.payload : !state.isEnabled;
+      state.isEnabled = action.payload !== null ? action.payload : !state.isEnabled;
 
       if (typeof document !== "undefined") {
-        document.body.classList[state.isEnabled ? "add" : "remove"](
-          "dark-scrollbars",
-        );
+        document.body.classList[state.isEnabled ? "add" : "remove"]("dark-scrollbars");
 
         document.documentElement.classList[state.isEnabled ? "add" : "remove"](
           "dark",

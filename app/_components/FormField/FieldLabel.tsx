@@ -10,7 +10,7 @@ const FieldLabel = ({ htmlFor, children, ...props }: Props) => {
   return (
     <label
       htmlFor={htmlFor}
-      className={`block mb-2 font-semibold ${htmlFor ? "cursor-pointer" : ""} ${props.className ?? ""}`}
+      className={`mb-2 block font-semibold ${htmlFor ? "cursor-pointer" : ""} ${props.className ?? ""}`}
     >
       <span className="line-clamp-1">{children}</span>
     </label>
