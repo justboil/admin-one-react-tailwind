@@ -9,6 +9,10 @@
     @apply inline-flex items-center cursor-pointer relative;
   }
 
+  &.disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
   & input {
     @apply absolute left-0 opacity-0 -z-1;
   }

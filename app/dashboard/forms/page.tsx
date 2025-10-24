@@ -137,8 +137,8 @@ export default function FormsPage() {
             <Form>
               <FieldLabel>Checkbox</FieldLabel>
               <FormCheckRadioGroup>
-                <FormCheckRadio type="checkbox" label="Lorem" isGrouped>
-                  <Field type="checkbox" name="checkboxes" value="lorem" />
+                <FormCheckRadio type="checkbox" label="Disabled" disabled isGrouped>
+                  <Field type="checkbox" name="checkboxes" value="lorem" disabled />
                 </FormCheckRadio>
                 <FormCheckRadio type="checkbox" label="Ipsum" isGrouped>
                   <Field type="checkbox" name="checkboxes" value="ipsum" />
